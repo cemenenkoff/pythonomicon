@@ -1,6 +1,6 @@
 """
 Created on Wed Nov 21 12:58:37 2018
-@author: Cemenenkoff
+@author: Cemenenkoffsdf
 
 Below, we answer projecteuler.org question #3.
 
