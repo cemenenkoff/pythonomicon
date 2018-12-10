@@ -70,7 +70,7 @@ def PE3(n):
             n //= i              #redefine n as the result of dividing n by i.
             if n == 1 or n == i: #If what remains is 1 or i, it means we've
                                  #"divided out" all factors of i, so
-                return i         #return i as it is the largest factor.
+                return i         #return i as it is the largest factor. 
 
 n=600851475143
 print(PE3(n))
