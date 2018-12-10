@@ -35,20 +35,4 @@ import time
 start = time.time()
 answer = PE4()
 elapsed = (time.time() - start)
-
 print ('%s found in %s seconds' % (answer,elapsed))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
