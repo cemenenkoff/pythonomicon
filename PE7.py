@@ -54,4 +54,4 @@ start = time.time()
 answer = PE7(10001)
 elapsed = (time.time() - start)
 print ('%s found in %s seconds' % (answer, elapsed))
-#104759 found in 0.19547724723815918 seconds
+#104743 found in 0.182511568069458 seconds
