@@ -25,9 +25,8 @@ import time
 start = time.time()
 answer = PE5()
 elapsed = (time.time() - start)
-#232792560 found in 5.440448999404907 seconds
-
 print ('%s found in %s seconds' % (answer,elapsed))
+#232792560 found in 5.440448999404907 seconds
 
 """
 The answer can actually be found directly by starting with 2*3*5*7*11*13*17*19 
