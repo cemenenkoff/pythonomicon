@@ -39,8 +39,10 @@ elapsed = (timeit.default_timer() - start)
 print ('%s found in %s seconds' % (answer, elapsed))
 
 """
-Math wins at the end of the day (17 times faster!). My way of
-solving this mathematically came from initially thinking about two summations:
+I approached this problem by thinking about sorting, but also by using basic
+number theory. Each approach had a relatively simple solution, but it turns out
+that  math wins at the end of the day (17 times faster!). My way of solving
+this mathematically came from initially thinking about two summations:
             3i from i=1,...,333    and    5i from i=1,...,199.
 The ending i for each series is found by thinking about which multiple is the
 largest one strictly less than 1000: 3*333=999 and 199*5=995. Notice though
