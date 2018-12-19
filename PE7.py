@@ -30,7 +30,7 @@ def is_prime(n):
             if n%possible_factor==0:
                 return False
         return True
-        
+       
 #1*: Notice we skip by 2 to only check odd numbers. The +1 is added for the
 #case of 9 to avoid range(3,3).
 #print(is_prime(104729))
@@ -41,17 +41,19 @@ def PE7(n):
     for num in range(3, n*n, 2):#*2
         if is_prime(num)==True:
             count+=1
-            if count==n:
+            if count==n: #Once we find the nth prime number, return num.
                 return num
     if count<n:
         return 'lift ceiling'
 
-#2*: Again we skip by 2 to only check odd numbers. The ceiling is arbitrary,
-#and should be lifted if the desired count isn't reached.
+"""
+2*: Again we skip by 2 to only check odd numbers. The ceiling is arbitrary, and
+should be lifted if the desired count isn't reached. We know by the prime
+number theorem that pi(n)~n/logn, so I chose n*n to be safe.
+"""
 
 import time
 start = time.time()
-answer = PE7(10001)
+answer = PE7(10001) #104743 found in 0.182511568069458 seconds
 elapsed = (time.time() - start)
 print ('%s found in %s seconds' % (answer, elapsed))
-#104743 found in 0.182511568069458 seconds

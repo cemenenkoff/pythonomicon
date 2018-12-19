@@ -34,7 +34,7 @@ def PE1_math(a,b,n):
 import timeit #Better than the time module to find speeds of solutions.
 start = timeit.default_timer()
 #answer = PE1() #233168 found in 0.0001084950661563904 seconds
-answer = PE1_math(3,5,1000) #233168.0 found in 6.339037568636741e-06 seconds
+answer = PE1_math(3,5,1000) #233168.0 found in 7.801892024872359e-06 seconds
 elapsed = (timeit.default_timer() - start)
 print ('%s found in %s seconds' % (answer, elapsed))
 

@@ -63,6 +63,13 @@ check factors above sqrt(n) to determine if n is prime. The idea that started
 this function was to keep dividing even n's by 2. Once all the twos are gone,
 then we can divide out all the 3's, 5's, etc. Note that by dividing out ALL of
 the 2's, we can ignore trying to divide out any more even numbers above 2.
+
+The sqrt(n) ceiling comes from thinking about the following argument:
+    n=ab iff n is composite.
+    If a>sqrt(n) and b>sqrt(n), then ab>sqrt(n), so then by the contrapositive,
+    if ab<=n, then a<=sqrt(n) and b<=sqrt(n).
+    If all factors up to sqrt(n) fail to divide n, then we can conclude n is
+    not composite. Since n is a non-composite integer, it is therefore prime.
 """
 def PE3(n):
     for i in range(2,int(np.sqrt(n))):
@@ -73,5 +80,9 @@ def PE3(n):
                 return i         #return i as it is the largest factor. 
 
 n=600851475143
-print(PE3(n))
-print(SOE(n))
+import timeit
+start = timeit.default_timer()
+answer = PE3(n) #6857 found in 0.0005149248982512233 seconds
+#answer = SOE(n) #MemoryError lol
+elapsed = (timeit.default_timer() - start)
+print ('%s found in %s seconds' % (answer, elapsed))
