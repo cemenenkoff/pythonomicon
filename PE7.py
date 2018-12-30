@@ -17,8 +17,8 @@ three cases:
     (3) If a<sqrt(n), then b>sqrt(n), so checking up to sqrt(n) ensures we will
         encounter a, which then confirms n is composite.
 To show n is prime, it is enough to show that n is not composite. Thus, if we
-check factors up to ceil(sqrt(n)) (to be safe) and still cannot find one that
-divides n, we may conclude n is not composite and is therefore prime.
+check factors up to int(sqrt(n)) and still cannot find one that divides n, we
+may conclude n is not composite and is therefore prime.
 """
 
 import numpy as np
@@ -26,15 +26,15 @@ def is_prime(n):
     if n%2==0: #Return False if the number is even.
         return False
     else: #Instead, if the number is odd:
-        for possible_factor in range(3, int(np.ceil(np.sqrt(n)))+1, 2):#*1
+        for possible_factor in range(3, int(np.sqrt(n))+1, 2):#*1
             if n%possible_factor==0:
                 return False
         return True
        
 #1*: Notice we skip by 2 to only check odd numbers. The +1 is added for the
 #case of 9 to avoid range(3,3).
-#print(is_prime(104729))
-#print(is_prime(9))
+print(is_prime(104729))
+print(is_prime(9))
 
 def PE7(n):
     count = 1
@@ -54,6 +54,6 @@ number theorem that pi(n)~n/logn, so I chose n*n to be safe.
 
 import time
 start = time.time()
-answer = PE7(10001) #104743 found in 0.182511568069458 seconds
+answer = PE7(10001) #104743 found in 0.1406238079071045 seconds
 elapsed = (time.time() - start)
 print ('%s found in %s seconds' % (answer, elapsed))

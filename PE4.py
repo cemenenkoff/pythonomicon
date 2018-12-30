@@ -31,8 +31,8 @@ next relevant item.
 palindrome found so far, because if it isn't, we should just move on without
 taking the time to perform the more costly check to see if it's a palindrome.
 """
-import time
-start = time.time()
-answer = PE4()
-elapsed = (time.time() - start)
-print ('%s found in %s seconds' % (answer,elapsed))
+import timeit
+start = timeit.default_timer()
+answer = PE4() #906609 found in 0.03671574143040522 seconds
+elapsed = (timeit.default_timer() - start)
+print ('%s found in %s seconds' % (answer, elapsed))

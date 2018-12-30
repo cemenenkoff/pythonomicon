@@ -2,7 +2,7 @@
 """
 Created on Tue Dec 18 12:34:27 2018
 
-@author: Cemenenkoff
+@author: Cemenenkoffd
 
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we
 get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -26,8 +26,8 @@ def PE1_math(a,b,n):
         side. Then the first LHS identifier (a) is assigned to the first
         element of the RHS tuple, and the second LHS identifier (b) assigned to
         the second element of the RHS tuple."""
-    la = math.ceil(n/a)-1 #ceil and -1 in case a divides n.
-    lb = math.ceil(n/b)-1 #lb stands for "last b multiple", etc.
+    la = math.ceil(n/a)-1 #la stands for "last a multiple", etc.
+    lb = math.ceil(n/b)-1 #ceil and -1 in case b divides n.
     lc = int(lb/a) #It's ok for a to divide lb, so just truncate it.
     return a*la/2*(la+1)+b*lb/2*(lb+1)-a*b*lc/2*(lc+1)
 

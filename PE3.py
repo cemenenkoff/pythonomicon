@@ -65,11 +65,11 @@ then we can divide out all the 3's, 5's, etc. Note that by dividing out ALL of
 the 2's, we can ignore trying to divide out any more even numbers above 2.
 
 The sqrt(n) ceiling comes from thinking about the following argument:
-    n=ab iff n is composite.
-    If a>sqrt(n) and b>sqrt(n), then ab>sqrt(n), so then by the contrapositive,
-    if ab<=n, then a<=sqrt(n) and b<=sqrt(n).
+    Given a!=n and b!=n, n=ab iff n is composite.
+    If a>sqrt(n) and b>sqrt(n), then ab>n, so then by the contrapositive,
+    if ab<=n, then a<=sqrt(n) or b<=sqrt(n).
     If all factors up to sqrt(n) fail to divide n, then we can conclude n is
-    not composite. Since n is a non-composite integer, it is therefore prime.
+    not composite and therefore prime.
 """
 def PE3(n):
     for i in range(2,int(np.sqrt(n))):

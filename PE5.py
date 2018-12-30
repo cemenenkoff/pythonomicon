@@ -21,10 +21,10 @@ def PE5():
                                 if num%19==0: #Check 19.
                                     return num
 
-import time
-start = time.time()
+import timeit
+start = timeit.default_timer()
 answer = PE5()
-elapsed = (time.time() - start)
+elapsed = (timeit.default_timer() - start)
 print ('%s found in %s seconds' % (answer,elapsed))
 #232792560 found in 5.440448999404907 seconds 
 
