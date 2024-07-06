@@ -301,7 +301,7 @@ As we want to automate our workflow further, we can introduce some of these addi
   - TOML configuration file that specifies build system requirements, dependencies, and other project metadata. I primarily use it to define settings for the Black code formatter.
 
 # 5. Conclusion
-If you've made it this far, bravo. It's a lot of condensed information, but it's the core of developing like a software engineer. Practicing these principles and workflows alongside coding concepts and data projects is the difference between pushing a project to production or having it sit in a closet as a prototype. Docker containers are relevant to this idea, but are outside of the scope of this practice repo.
+If you've made it this far, bravo. It's a lot of condensed information, but it's the core of developing like a software engineer. Practicing these principles and workflows alongside coding concepts and data projects is the difference between pushing a project to production or having it sit in a closet as a prototype. [Docker containers](https://www.docker.com/resources/what-container/) are relevant to this idea, but are outside of the scope of this practice repo.
 
 ## 5.1 Where to Go from Here?
 If you were able to use these concepts to clone or fork this repository to start developing solutions to Project Euler or LeetCode problems, treat this repo as a gym. It's a place to show up every day and keep your mind and software skills sharp. Don't just solve problems, but practice your workflows, and keep on top of your Github profile. Remember that consistency is key, and strength builds over time.
