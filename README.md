@@ -44,7 +44,7 @@ After installation, we can verify Python is correctly installed by opening Comma
 ## 2.2 Git Bash  <img height=25 src="img/readme/git-bash-logo.png" style="vertical-align: bottom;"/>
 Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) or [PowerShell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell), I prefer using [Git Bash](https://git-scm.com/) because it is cross-platform and designed for Git, the near-ubiquitous version control system. Download the [latest stable build](https://git-scm.com/download/win) and install it with the default recommended settings.
 
-## 2.3 Notepad++ <img height=30 src="img/readme/notepad-logo-white.png" style="vertical-align: bottom;"/>
+## 2.3 Notepad++ <img height=30 src="img/readme/notepad-logo.png" style="vertical-align: bottom;"/>
 [Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default Notepad. If we were to code Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash, our preferred terminal. Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
 
 ## 2.4 VS Code <img height=25 src="img/readme/vs-code-logo.png" style="vertical-align: bottom;"/>
