@@ -296,7 +296,7 @@ As we want to automate our workflow further, we can introduce some of these addi
 - `.gitattributes`
   - Configuration file that specifies attributes for files in a Git repository. It can define attributes such as text/binary handling, merge strategies, and end-of-line normalization.
 - `.pre-commit-config.yaml`
-  - Configuration file for the [Pre-commit framework](https://pre-commit.com/), which manages and executes hooks for code formatting, linting, and more, ensuring code quality before commits. If there are a ton of recommended changes to make, `git push --no-verify` is a way to bypass the `pre-commit` checks.
+  - Configuration file for the [Pre-commit framework](https://pre-commit.com/), which manages and executes hooks for code formatting, linting, and more, ensuring code quality before commits. If there are a ton of recommended changes to make, using the `--no-verify` flag bypasses the `pre-commit` checks.
 - `pyproject.toml`
   - TOML configuration file that specifies build system requirements, dependencies, and other project metadata. I primarily use it to define settings for the Black code formatter.
 
