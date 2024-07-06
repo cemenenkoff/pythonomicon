@@ -1,13 +1,14 @@
-# Zero to Hero: Academic to Pro
+# Scholar to Strategist: Navigating the Data Professional Path
+# ![logo](img/data-circles.png)
 
 # 1. Introduction
-This repository is like a gym for your coding skills. It's designed for those who excel in math, statistics, or data analysis but have gaps in software engineering. If you're great academically but struggle with coding, this repo is perfect for you.
+This repository is like a gym for your coding skills. It's designed for those who excel in math, statistics, or data analysis but have gaps in software engineering. If you're great academically but struggle with coding, this repo is perfect for you, no matter what data-based job you're aiming for.
 
 ## 1.1 Background
 When I graduated in math and physics, I had some [Python](https://www.python.org/) experience, but only in a research context. I needed to shift my thinking to a more computational approach. I realized that strong software skills could help solve complex problems. I found [Project Euler](projecteuler.net), a website focused on solving progressively challenging math problems with code, and thought it was the perfect place to start. Later, I found [LeetCode](https://leetcode.com/) was also crucial for improving.
 
 ## 1.2 Purpose
-After six years as a professional developer, I've added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of interfacing with the computer as a software developer while also solving [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net) problems. If you're strong in math but need to improve your Python skills, this repository is for you.
+After six years as a professional developer, I've added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while also solving [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net) problems. If you're strong in math but need to improve your computer skills, this repository is for you.
 
 # 2. Environment Setup <img height=25 src="img/readme/windows-logo.png" style="vertical-align: bottom;"/>
 If you've used [R](https://www.r-project.org/) or [Python](https://www.python.org/) in research, you may have used [Anaconda](https://www.anaconda.com/) to simplify setup, package installation, and writing prototype code. However, staying in this tutorial zone can limit you. Learning to set up Python and interact with your computer's filesystem is crucial foundational knowledge, even if it's frustrating at first.
