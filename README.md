@@ -1,4 +1,4 @@
-# Scholar to Strategist: Navigating the Data Professional Path
+# Crack the Code: Upgrading Academic Coding
 # ![logo](img/data-circles.png)
 
 # 1. Introduction
