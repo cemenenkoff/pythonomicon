@@ -33,109 +33,108 @@ What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20×20 grid?
 """
 
-with open('PE11.txt') as f:
+with open("PE11.txt") as f:
     lines = f.readlines()
-    #Get rid of the endline chars and extraneous whitespace by calling strip()
-    #with None.
+    # Get rid of the endline chars and extraneous whitespace by calling strip()
+    # with None.
     lines = [line.strip() for line in lines]
 
-lines_nochar = [] #Now we are going to get rid of the square bracket chars.
+lines_nochar = []  # Now we are going to get rid of the square bracket chars.
 for line in lines:
-    for char in '[]':
+    for char in "[]":
         if char in line:
-            line = line.replace(char,'')
+            line = line.replace(char, "")
     lines_nochar.append(line)
 lines = lines_nochar
 
-lines_nodblspace = [] #Getting rid of double spaces.
+lines_nodblspace = []  # Getting rid of double spaces.
 for line in lines:
-        if '  ' in line:
-            line = line.replace('  ',' ')
-            lines_nodblspace.append(line)
+    if "  " in line:
+        line = line.replace("  ", " ")
+        lines_nodblspace.append(line)
 lines = lines_nodblspace
 
-lines_nums = [] #Next, we'll make each line a list of numbers.
+lines_nums = []  # Next, we'll make each line a list of numbers.
 for line in lines:
-    linelist = [int(num) for num in line.split(' ')] #Split items at spaces.
+    linelist = [int(num) for num in line.split(" ")]  # Split items at spaces.
     lines_nums.append(linelist)
 
 import numpy as np
-#Create a 20x20 numpy array out of the 20 lists, each with 20 separate items.
-#The task now is to sort through the grid with 4-number-long slices.
+
+# Create a 20x20 numpy array out of the 20 lists, each with 20 separate items.
+# The task now is to sort through the grid with 4-number-long slices.
 numgrid = np.array(lines_nums)
 
-#For each number in the grid, check the product it forms with the next three
-#numbers above it, below it, to the left of it, to the right of it, and the
-#appropriate diagonals: up-left, up-right, down-left, and down-right.
+# For each number in the grid, check the product it forms with the next three
+# numbers above it, below it, to the left of it, to the right of it, and the
+# appropriate diagonals: up-left, up-right, down-left, and down-right.
 
-#Note for our 20x20 grid, we only want to check numbers on numgrid[3:17,3:17]
-#to ensure 3 nextdoor neighbors in all the appropriate directions.
+# Note for our 20x20 grid, we only want to check numbers on numgrid[3:17,3:17]
+# to ensure 3 nextdoor neighbors in all the appropriate directions.
+
 
 def PE11():
     max_product = 0
-    for row in range(3,17):
-        for col in range(3,17):
-            down      = numgrid[  row,col  ]*numgrid[row+1,col  ]*\
-                        numgrid[row+2,col  ]*numgrid[row+3,col  ]
-            up        = numgrid[  row,col  ]*numgrid[row-1,col  ]*\
-                        numgrid[row-2,col  ]*numgrid[row-3,col  ]
-            left      = numgrid[  row,col  ]*numgrid[  row,col-1]*\
-                        numgrid[  row,col-2]*numgrid[  row,col-3]
-            right     = numgrid[  row,col  ]*numgrid[  row,col+1]*\
-                        numgrid[  row,col+2]*numgrid[  row,col+3]
-            upleft    = numgrid[  row,col  ]*numgrid[row-1,col-1]*\
-                        numgrid[row-2,col-2]*numgrid[row-3,col-3]
-            upright   = numgrid[  row,col  ]*numgrid[row-1,col+1]*\
-                        numgrid[row-2,col+2]*numgrid[row-3,col+3]
-            downright = numgrid[  row,col  ]*numgrid[row+1,col+1]*\
-                        numgrid[row+2,col+2]*numgrid[row+3,col+3]
-            downleft  = numgrid[  row,col  ]*numgrid[row+1,col-1]*\
-                        numgrid[row+2,col-2]*numgrid[row+3,col-3]
-            products  = [down, up, left, right, upleft, upright, downright,\
-                         downleft]
+    for row in range(3, 17):
+        for col in range(3, 17):
+            down = (
+                numgrid[row, col]
+                * numgrid[row + 1, col]
+                * numgrid[row + 2, col]
+                * numgrid[row + 3, col]
+            )
+            up = (
+                numgrid[row, col]
+                * numgrid[row - 1, col]
+                * numgrid[row - 2, col]
+                * numgrid[row - 3, col]
+            )
+            left = (
+                numgrid[row, col]
+                * numgrid[row, col - 1]
+                * numgrid[row, col - 2]
+                * numgrid[row, col - 3]
+            )
+            right = (
+                numgrid[row, col]
+                * numgrid[row, col + 1]
+                * numgrid[row, col + 2]
+                * numgrid[row, col + 3]
+            )
+            upleft = (
+                numgrid[row, col]
+                * numgrid[row - 1, col - 1]
+                * numgrid[row - 2, col - 2]
+                * numgrid[row - 3, col - 3]
+            )
+            upright = (
+                numgrid[row, col]
+                * numgrid[row - 1, col + 1]
+                * numgrid[row - 2, col + 2]
+                * numgrid[row - 3, col + 3]
+            )
+            downright = (
+                numgrid[row, col]
+                * numgrid[row + 1, col + 1]
+                * numgrid[row + 2, col + 2]
+                * numgrid[row + 3, col + 3]
+            )
+            downleft = (
+                numgrid[row, col]
+                * numgrid[row + 1, col - 1]
+                * numgrid[row + 2, col - 2]
+                * numgrid[row + 3, col - 3]
+            )
+            products = [down, up, left, right, upleft, upright, downright, downleft]
             for product in products:
                 if product > max_product:
                     max_product = product
     return max_product
 
+
 import timeit
+
 start = timeit.default_timer()
-answer = PE11() #70600674 found in 0.0008886851725264933 seconds
-elapsed = (timeit.default_timer() - start)
-print('%s found in %s seconds'%(answer, elapsed))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+answer = PE11()  # 70600674 found in 0.0008886851725264933 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))

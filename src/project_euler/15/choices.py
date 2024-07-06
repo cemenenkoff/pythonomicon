@@ -19,11 +19,14 @@ decisions of going either down or to the right, choose 20 of them to be down.
 
 from scipy.special import comb
 
+
 def PE15():
-    return comb(40,20, exact=True)
+    return comb(40, 20, exact=True)
+
 
 import timeit
+
 start = timeit.default_timer()
-answer = PE15() #137846528820 found in 1.6579037520614293e-05 seconds
-elapsed = (timeit.default_timer() - start)
-print('%s found in %s seconds'%(answer, elapsed))
+answer = PE15()  # 137846528820 found in 1.6579037520614293e-05 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))

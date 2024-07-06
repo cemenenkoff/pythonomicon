@@ -17,15 +17,19 @@ Find the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum.
 
 """
+
+
 def PE6():
-    tot=0 #Running sum of the square of each natural number below 100.
-    sumnat_sq = (50*101)**2 #Sum of the natural numbers below 100, squared.
-    for num in range(1,100+1):
-        tot=num**2+tot
-    return int(sumnat_sq-tot)
+    tot = 0  # Running sum of the square of each natural number below 100.
+    sumnat_sq = (50 * 101) ** 2  # Sum of the natural numbers below 100, squared.
+    for num in range(1, 100 + 1):
+        tot = num**2 + tot
+    return int(sumnat_sq - tot)
+
 
 import timeit
+
 start = timeit.default_timer()
-answer = PE6() #25164150 found in 2.8281859941890533e-05 seconds
-elapsed = (timeit.default_timer() - start)
-print ('%s found in %s seconds' % (answer, elapsed))
+answer = PE6()  # 25164150 found in 2.8281859941890533e-05 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))

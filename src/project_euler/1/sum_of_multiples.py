@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+import math
+import timeit  # Better than the time module to find speeds of solutions.
+
 """
 Created on Tue Dec 18 12:34:27 2018
 
@@ -10,33 +12,34 @@ get 3, 5, 6 and 9. The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
+
 def PE1():
-    tot=0
+    tot = 0
     for num in range(1000):
-        if num%3==0 or num%5==0:
+        if num % 3 == 0 or num % 5 == 0:
             tot = tot + num
     return tot
 
-import math
-def PE1_math(a,b,n):
-    if b<a:
-        a,b=b,a #Tuple swap: b>a now.
+
+def PE1_math(a, b, n):
+    if b < a:
+        a, b = b, a  # Tuple swap: b>a now.
         """Python evaluates expressions from left to right, but when evaluating
         an assignment, the right-hand side is evaluated before the left-hand
         side. Then the first LHS identifier (a) is assigned to the first
         element of the RHS tuple, and the second LHS identifier (b) assigned to
         the second element of the RHS tuple."""
-    la = math.ceil(n/a)-1 #la stands for "last a multiple", etc.
-    lb = math.ceil(n/b)-1 #ceil and -1 in case b divides n.
-    lc = int(lb/a) #It's ok for a to divide lb, so just truncate it.
-    return a*la/2*(la+1)+b*lb/2*(lb+1)-a*b*lc/2*(lc+1)
+    la = math.ceil(n / a) - 1  # la stands for "last a multiple", etc.
+    lb = math.ceil(n / b) - 1  # ceil and -1 in case b divides n.
+    lc = int(lb / a)  # It's ok for a to divide lb, so just truncate it.
+    return a * la / 2 * (la + 1) + b * lb / 2 * (lb + 1) - a * b * lc / 2 * (lc + 1)
 
-import timeit #Better than the time module to find speeds of solutions.
+
 start = timeit.default_timer()
-#answer = PE1() #233168 found in 0.0001084950661563904 seconds
-answer = PE1_math(3,5,1000) #233168.0 found in 7.801892024872359e-06 seconds
-elapsed = (timeit.default_timer() - start)
-print ('%s found in %s seconds' % (answer, elapsed))
+# answer = PE1() #233168 found in 0.0001084950661563904 seconds
+answer = PE1_math(3, 5, 1000)  # 233168.0 found in 7.801892024872359e-06 secs
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))
 
 """
 I approached this problem by thinking about sorting, but also by using basic

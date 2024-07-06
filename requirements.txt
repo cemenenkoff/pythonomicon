@@ -8,6 +8,10 @@ build==1.2.1
     # via
     #   -r requirements.in
     #   pip-tools
+cfgv==3.4.0
+    # via
+    #   -r requirements.in
+    #   pre-commit
 click==8.1.7
     # via
     #   -r requirements.in
@@ -25,16 +29,32 @@ cycler==0.12.1
     # via
     #   -r requirements.in
     #   matplotlib
+distlib==0.3.8
+    # via
+    #   -r requirements.in
+    #   virtualenv
+filelock==3.15.4
+    # via
+    #   -r requirements.in
+    #   virtualenv
 fonttools==4.53.1
     # via
     #   -r requirements.in
     #   matplotlib
+identify==2.5.36
+    # via
+    #   -r requirements.in
+    #   pre-commit
 kiwisolver==1.4.5
     # via
     #   -r requirements.in
     #   matplotlib
 matplotlib==3.9.1
     # via -r requirements.in
+nodeenv==1.9.1
+    # via
+    #   -r requirements.in
+    #   pre-commit
 numpy==2.0.0
     # via
     #   -r requirements.in
@@ -54,6 +74,12 @@ pillow==10.4.0
     #   matplotlib
 pip-tools==7.4.1
     # via -r requirements.in
+platformdirs==4.2.2
+    # via
+    #   -r requirements.in
+    #   virtualenv
+pre-commit==3.7.1
+    # via -r requirements.in
 pyparsing==3.1.2
     # via
     #   -r requirements.in
@@ -72,6 +98,10 @@ pytz==2024.1
     # via
     #   -r requirements.in
     #   pandas
+pyyaml==6.0.1
+    # via
+    #   -r requirements.in
+    #   pre-commit
 six==1.16.0
     # via
     #   -r requirements.in
@@ -85,6 +115,10 @@ tzdata==2024.1
     # via
     #   -r requirements.in
     #   pandas
+virtualenv==20.26.3
+    # via
+    #   -r requirements.in
+    #   pre-commit
 wheel==0.43.0
     # via pip-tools
 

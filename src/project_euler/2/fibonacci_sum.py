@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+import timeit
+
 """
 Created on Wed Dec 19 11:04:44 2018
 
@@ -12,20 +15,22 @@ terms. By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 """
+
+
 def PE2():
-    nex,now,last = 5,3,2 #next is already used by Python, so we use "nex".
-    tot=2
-    while nex < 4*10**6:
-        now,last=nex,now #Tuple swap. I think of it like shifting left:
-                         #[5],[3],2 <-- 5,[3],[2]
-        nex=now+last #Then 8,[5],[3] etc.
-        if nex%2==0: #Only add even numbers to the running total.
-            tot=tot+nex #2+8=10, and then keep going.
-            #print('%10s + %10s + %10s = %-10s'%(nex,now,last,tot))
+    nex, now, last = 5, 3, 2  # next is already used by Python, so we use "nex".
+    tot = 2
+    while nex < 4 * 10**6:
+        now, last = nex, now  # Tuple swap. I think of it like shifting left:
+        # [5],[3],2 <-- 5,[3],[2]
+        nex = now + last  # Then 8,[5],[3] etc.
+        if nex % 2 == 0:  # Only add even numbers to the running total.
+            tot = tot + nex  # 2+8=10, and then keep going.
+            # print('%10s + %10s + %10s = %-10s'%(nex,now,last,tot))
     return tot
 
-import timeit
+
 start = timeit.default_timer()
-answer = PE2() #4613732 found in 5.607610160892087e-06 seconds
-elapsed = (timeit.default_timer() - start)
-print ('%s found in %s seconds' % (answer, elapsed))
+answer = PE2()  # 4613732 found in 5.607610160892087e-06 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))

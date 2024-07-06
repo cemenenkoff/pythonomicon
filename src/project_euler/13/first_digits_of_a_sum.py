@@ -118,74 +118,80 @@ with those extra digits (put them in a column somewhere further left).
 
 import numpy as np
 
-#This function takes a list of strings, finds the length of the strings(s) with
-#the most characters, and then leftpads 0s on all of the strings with less
-#characters so all of the strings in the list become the same length.
+
+# This function takes a list of strings, finds the length of the strings(s) with
+# the most characters, and then leftpads 0s on all of the strings with less
+# characters so all of the strings in the list become the same length.
 def leftpad_zeros(numlist):
     widest_len = len(max(numlist, key=len))
     for i, numstring in enumerate(numlist):
         width_diff = widest_len - len(numstring)
-        if width_diff>0:
-            numlist[i] = width_diff*'0'+numstring
+        if width_diff > 0:
+            numlist[i] = width_diff * "0" + numstring
     return numlist
 
-#This function takes a list of strings, each of which represents a number with
-#a certain amount of digits, and then "staggers" them all in a matrix, e.g.
-#an input of [31, 32, 33, 34] would create
-    #[3 1 0 0 0]
-    #[0 3 2 0 0]
-    #[0 0 3 3 0]
-    #[0 0 0 3 4]
-#It then sums all numbers in the matrix column-by-column and returns the sums
-#as a list of strings. The above example outputs ['3', '4', '5', '6', '4'].
+
+# This function takes a list of strings, each of which represents a number with
+# a certain amount of digits, and then "staggers" them all in a matrix, e.g.
+# an input of [31, 32, 33, 34] would create
+# [3 1 0 0 0]
+# [0 3 2 0 0]
+# [0 0 3 3 0]
+# [0 0 0 3 4]
+# It then sums all numbers in the matrix column-by-column and returns the sums
+# as a list of strings. The above example outputs ['3', '4', '5', '6', '4'].
 def restack_resum(sumcols):
-    #Stacking is easy when all of the strings have the same length, so ensure
-    #this by running leftpad_zeros if the strings aren't all the same length.
-    if all(len(num)==len(sumcols[0]) for num in sumcols) == False:
+    # Stacking is easy when all of the strings have the same length, so ensure
+    # this by running leftpad_zeros if the strings aren't all the same length.
+    if all(len(num) == len(sumcols[0]) for num in sumcols) == False:
         sumcols = leftpad_zeros(sumcols)
-    #Once the numbers are all the same length, we will acquire precisely
-    #len(sumcols)+len(sumcols[0])-1 additional columns.
-    sumgrid = np.zeros((len(sumcols),len(sumcols)+len(sumcols[0])-1))
+    # Once the numbers are all the same length, we will acquire precisely
+    # len(sumcols)+len(sumcols[0])-1 additional columns.
+    sumgrid = np.zeros((len(sumcols), len(sumcols) + len(sumcols[0]) - 1))
     for i, number in enumerate(sumcols):
         for j, digit in enumerate(number):
-            sumgrid[i,i+j] = digit
-    #Once the numbers are stacked up nicely, sum them up column-by-column.
+            sumgrid[i, i + j] = digit
+    # Once the numbers are stacked up nicely, sum them up column-by-column.
     sumcols_new = np.sum(sumgrid, axis=0)
     sumcols_new = ["%d" % number for number in sumcols_new]
     return sumcols_new
 
-#This function takes in a list of strings and keeps running restack_resum() on
-#them until the first ten entries are of length 1, and there's no leading '0'.
+
+# This function takes in a list of strings and keeps running restack_resum() on
+# them until the first ten entries are of length 1, and there's no leading '0'.
 def stack_til_10(sumcols):
     first_ten = sumcols[0:10]
-    while all(len(num)==1 for num in first_ten) == False:
+    while all(len(num) == 1 for num in first_ten) == False:
         sumcols = restack_resum(sumcols)
-        if sumcols[0] == '0':
-            sumcols.remove('0')
+        if sumcols[0] == "0":
+            sumcols.remove("0")
         first_ten = sumcols[0:10]
-    return ''.join(first_ten)
+    return "".join(first_ten)
+
 
 def PE13():
-    #Import the data and remove whitespace.
-    with open('PE13.txt') as f:
+    # Import the data and remove whitespace.
+    with open("PE13.txt") as f:
         lines = f.readlines()
         lines = [line.strip() for line in lines]
-    
-    #Initialize a 100x50 matrix of zeros. Each row is a number string, and each
-    #column represents (descending) place value holders for digits.
-    numgrid = np.zeros((100,50))
+
+    # Initialize a 100x50 matrix of zeros. Each row is a number string, and each
+    # column represents (descending) place value holders for digits.
+    numgrid = np.zeros((100, 50))
     for i, numstring in enumerate(lines):
         for j, digit in enumerate(numstring):
-            numgrid[i,j]=digit
-    
-    #Sum the entries of each column and then convert the sums to strings for
-    #use in leftpad_zeros(), restack_resum(), and stack_til_10().
+            numgrid[i, j] = digit
+
+    # Sum the entries of each column and then convert the sums to strings for
+    # use in leftpad_zeros(), restack_resum(), and stack_til_10().
     sumcols = np.sum(numgrid, axis=0)
     sumcols = ["%d" % number for number in sumcols]
     return stack_til_10(sumcols)
 
+
 import timeit
+
 start = timeit.default_timer()
-answer = PE13() #5537376230 found in 0.001048136503992988 seconds
-elapsed = (timeit.default_timer() - start)
-print('%s found in %s seconds'%(answer, elapsed))
+answer = PE13()  # 5537376230 found in 0.001048136503992988 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))

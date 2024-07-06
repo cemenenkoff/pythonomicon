@@ -29,7 +29,7 @@ All right, the math is ramping up! Below is a synopsis of what I had on my
 whiteboard.
 
 The incoming n is a natural number and has the form:
-    
+
     n = (p_1**e_1)*(p_2**e_2)*(p_3**e_3)*...*(p_k**e_k)
     where each p_i is a prime number, and each 0<=e_i.
 
@@ -42,68 +42,71 @@ possible choices for the accompanying exponent. Once a choice is made for each
 p_i's e_i, the resultant sequence forms a product which represents a divisor of
 n. The total number of divisors for n is thus equal to the number of
 combinations of exponent choices in n's prime factorization, i.e.:
-    
+
     for prime p_1, we can choose either 0, 1, 2, ..., or e_1
     for prime p_2, we can choose either 0, 1, 2, ..., or e_2
     for prime p_3, we can choose either 0, 1, 2, ..., or e_3
     ...
     for prime p_k, we can choose either 0, 1, 2, ..., or e_k
-    
+
     total number of choices = (e_1+1)*(e_2+1)*(e_3+1)*...*(e_k+1)
 """
 
 import numpy as np
 
+
 def prime_exps(n):
-    #The incoming n has the form:
+    # The incoming n has the form:
     #   n = (p_1**e_1)*(p_2**e_2)*(p_3**e_3)*...*(p_k**e_k)
-    #We are going to create the list [e_1, e_2, e_3, ..., e_k].
-    #As a prototype, initialize a list of unknown size. We can fix this later
-    #if we run into memory issues.
+    # We are going to create the list [e_1, e_2, e_3, ..., e_k].
+    # As a prototype, initialize a list of unknown size. We can fix this later
+    # if we run into memory issues.
     e_list = []
-    
-    #Code in 2 as the only even instance with a return exception for the case
-    #that n is a power of 2.
-    e=0
-    while n%2==0:
-        n //= 2 #Floor division here forces type int.
+
+    # Code in 2 as the only even instance with a return exception for the case
+    # that n is a power of 2.
+    e = 0
+    while n % 2 == 0:
+        n //= 2  # Floor division here forces type int.
         e += 1
-        if n==1:
+        if n == 1:
             e_list.append(e)
             return e_list
     if e > 0:
         e_list.append(e)
-    
-    #We'll only check odd factors from 3 up to sqrt(n) after hardcoding 2.
-    #i represents a possible prime factor of n.
-    for i in range(3, int(np.sqrt(n)+1), 2):
-        e=0 #Each factor's exponent starts at zero because x**0=1 for all x.
-        while n % i == 0: #As long as i|n,
-            n //= i       #Redefine n as the quotient n/i.
-            e += 1        #Add 1 to this i's e for each successful division.
-            if n == 1:    #If we've just divided out the largest factor
-                e_list.append(e) #Update the exponent list,
-                return e_list    #and then return it.
-        if e > 0: #If instead we've divided out all factors i, but n>1, update
-                  #the e_list, and then move to the next factor.
+
+    # We'll only check odd factors from 3 up to sqrt(n) after hardcoding 2.
+    # i represents a possible prime factor of n.
+    for i in range(3, int(np.sqrt(n) + 1), 2):
+        e = 0  # Each factor's exponent starts at zero because x**0=1 for all x.
+        while n % i == 0:  # As long as i|n,
+            n //= i  # Redefine n as the quotient n/i.
+            e += 1  # Add 1 to this i's e for each successful division.
+            if n == 1:  # If we've just divided out the largest factor
+                e_list.append(e)  # Update the exponent list,
+                return e_list  # and then return it.
+        if e > 0:  # If instead we've divided out all factors i, but n>1, update
+            # the e_list, and then move to the next factor.
             e_list.append(e)
-    #If we conclude the current n is a large prime because we couldn't divide
-    #it down to 1, account for its exponent of 1 and then return the e_list.
+    # If we conclude the current n is a large prime because we couldn't divide
+    # it down to 1, account for its exponent of 1 and then return the e_list.
     e_list.append(1)
     return e_list
 
+
 def num_divisors(e_list):
-    product=1
+    product = 1
     for exponent in e_list:
-        exponent+=1
-        product*=exponent
+        exponent += 1
+        product *= exponent
     return product
 
-#Note for all n's below, there will be over 500 divisors. We could use
-#something similar to this method to find prime factorizations with over 500
-#diviors, and then check if they represent triangle numbers, but I think it'd
-#be easier to generate triangle numbers, and then check if they have the
-#desired amount of divisors.
+
+# Note for all n's below, there will be over 500 divisors. We could use
+# something similar to this method to find prime factorizations with over 500
+# diviors, and then check if they represent triangle numbers, but I think it'd
+# be easier to generate triangle numbers, and then check if they have the
+# desired amount of divisors.
 """
 n=(2**int(500/(0+1)))*(3**0) #i.e. n=2**500*(1)
 n=(2**int(500/(1+1)))*(3**1)
@@ -120,18 +123,21 @@ print(prime_exps(n))
 print(num_divisors(prime_exps(n)))
 """
 
-#I bet we'll find something in the first million terms of the sequence of
-#triangle numbers. If PE12() returns None, we'll have to raise the ceiling.
+
+# I bet we'll find something in the first million terms of the sequence of
+# triangle numbers. If PE12() returns None, we'll have to raise the ceiling.
 def PE12():
     floor = 1
     ceiling = 10**6
-    trinums = [int((n/2)*(n+1)) for n in range(floor, ceiling)]
+    trinums = [int((n / 2) * (n + 1)) for n in range(floor, ceiling)]
     for trinum in trinums:
         if num_divisors(prime_exps(trinum)) > 500:
             return trinum
 
+
 import timeit
+
 start = timeit.default_timer()
-answer = PE12() #76576500 found in 1.1108489076730166 seconds
-elapsed = (timeit.default_timer() - start)
-print('%s found in %s seconds'%(answer, elapsed))
+answer = PE12()  # 76576500 found in 1.1108489076730166 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))

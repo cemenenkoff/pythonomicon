@@ -1,0 +1,14 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203,W503
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    .mypy_cache,
+    .tox,
+    .pytest_cache,
+    .vscode
+
+# Enable Black compatibility
+ignore = E203, W503

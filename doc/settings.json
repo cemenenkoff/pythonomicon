@@ -1,0 +1,88 @@
+{
+    "window.zoomLevel": 2,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Pylance",
+    "editor.renderControlCharacters": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "none",
+    "editor.wordWrapColumn": 88,
+    "editor.wordWrap": "wordWrapColumn",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.menuBarVisibility": "classic",
+    "editor.minimap.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.autoSave": "onFocusChange",
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "editor.rulers": [
+        {
+            "column": 72, // PEP 8 docstrings and comments length
+            "color": "#1557364d"
+        },
+        {
+            "column": 79, // PEP 8 default line length
+            "color": "#19d4e516"
+        },
+        {
+            "column": 88, // Black formatting line length
+            "color": "#9d9d9dbd"
+        },
+        {
+            "column": 99, // PEP 8 maximum line length
+            "color": "#992f2f41"
+        },
+    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.defaultInterpreterPath": "C:\\Users\\Cemenenkoff\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "[python]": {
+        "editor.formatOnType": true
+    }
+}

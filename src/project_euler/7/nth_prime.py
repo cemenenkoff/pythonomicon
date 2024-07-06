@@ -22,29 +22,34 @@ may conclude n is not composite and is therefore prime.
 """
 
 import numpy as np
+
+
 def is_prime(n):
-    if n%2==0: #Return False if the number is even.
+    if n % 2 == 0:  # Return False if the number is even.
         return False
-    else: #Instead, if the number is odd:
-        for possible_factor in range(3, int(np.sqrt(n))+1, 2):#*1
-            if n%possible_factor==0:
+    else:  # Instead, if the number is odd:
+        for possible_factor in range(3, int(np.sqrt(n)) + 1, 2):  # *1
+            if n % possible_factor == 0:
                 return False
         return True
-       
-#1*: Notice we skip by 2 to only check odd numbers. The +1 is added for the
-#case of 9 to avoid range(3,3).
+
+
+# 1*: Notice we skip by 2 to only check odd numbers. The +1 is added for the
+# case of 9 to avoid range(3,3).
 print(is_prime(104729))
 print(is_prime(9))
 
+
 def PE7(n):
     count = 1
-    for num in range(3, n*n, 2):#*2
-        if is_prime(num)==True:
-            count+=1
-            if count==n: #Once we find the nth prime number, return num.
+    for num in range(3, n * n, 2):  # *2
+        if is_prime(num) == True:
+            count += 1
+            if count == n:  # Once we find the nth prime number, return num.
                 return num
-    if count<n:
-        return 'lift ceiling'
+    if count < n:
+        return "lift ceiling"
+
 
 """
 2*: Again we skip by 2 to only check odd numbers. The ceiling is arbitrary, and
@@ -53,7 +58,8 @@ number theorem that pi(n)~n/logn, so I chose n*n to be safe.
 """
 
 import time
+
 start = time.time()
-answer = PE7(10001) #104743 found in 0.1406238079071045 seconds
-elapsed = (time.time() - start)
-print ('%s found in %s seconds' % (answer, elapsed))
+answer = PE7(10001)  # 104743 found in 0.1406238079071045 seconds
+elapsed = time.time() - start
+print("%s found in %s seconds" % (answer, elapsed))

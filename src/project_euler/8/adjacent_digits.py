@@ -34,39 +34,41 @@ greatest product. What is the value of this product?
 
 
 def PE8_for():
-    with open('PE8.txt') as f:
-         lines = f.readlines() 
-    #Remove characters like '\n' at the end of each line with .strip()
+    with open("PE8.txt") as f:
+        lines = f.readlines()
+    # Remove characters like '\n' at the end of each line with .strip()
     lines = [x.strip() for x in lines]
-    #Concatenate everything into one string and then convert it to an integer.
-    number_str = ''.join(lines)
-    
-    #Now we are going to slide across this number from left to right with a
-    #slider that is 13 digits long. For example, if we had a 3-digit-long
-    #slider on the number 9876789, our analysis would look like:
+    # Concatenate everything into one string and then convert it to an integer.
+    number_str = "".join(lines)
+
+    # Now we are going to slide across this number from left to right with a
+    # slider that is 13 digits long. For example, if we had a 3-digit-long
+    # slider on the number 9876789, our analysis would look like:
     #    [987]6789, 9[876]789, 98[767]89, 987[678]9, 9876[789]
-    
-    number_len = len(number_str) #Find the amount of digits in the number.
-    slider_len = 13 #We have slider with space for 13 consecutive digits.
+
+    number_len = len(number_str)  # Find the amount of digits in the number.
+    slider_len = 13  # We have slider with space for 13 consecutive digits.
     max_product = 0
-    #Stop once the slider reaches the last possible 13-digit string.
-    for i in range(0,number_len-slider_len+1):
-        #list() makes each 13-digit-long string a list of 1-char-long strings.                                   
-        digits = list(number_str[i:i+13])
-        if '0' in digits: #If '0' is found, slide to the right by 1. See *1.
+    # Stop once the slider reaches the last possible 13-digit string.
+    for i in range(0, number_len - slider_len + 1):
+        # list() makes each 13-digit-long string a list of 1-char-long strings.
+        digits = list(number_str[i : i + 13])
+        if "0" in digits:  # If '0' is found, slide to the right by 1. See *1.
             continue
         product = 1
         for digit in digits:
-            product = product*int(digit)
-            if product>max_product:
+            product = product * int(digit)
+            if product > max_product:
                 max_product = product
     return max_product
-        
-import timeit #Better than the time module to find speeds of solutions.
+
+
+import timeit  # Better than the time module to find speeds of solutions.
+
 start = timeit.default_timer()
-answer = PE8_for() #23514624000 found in 0.0009942546320473866 seconds
-elapsed_for = (timeit.default_timer() - start)
-print ('%s found in %s seconds' % (answer, elapsed_for))
+answer = PE8_for()  # 23514624000 found in 0.0009942546320473866 seconds
+elapsed_for = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed_for))
 
 """
 *1: I'm satisfied with my answer, but I see a way it could be optimized. If a
@@ -89,50 +91,52 @@ with while loops. If given something like
 there will still be ten print statements (0,1,7,3,...,8,9), so the best we can
 do with a for loop is use a continue statement to bump the slider index over by
 1 if a '0' is encountered.
-"""  
-        
+"""
+
+
 def PE8_while():
-    with open('PE8.txt') as f:
-         lines = f.readlines() 
-    #Remove characters like '\n' at the end of each line with .strip()
+    with open("PE8.txt") as f:
+        lines = f.readlines()
+    # Remove characters like '\n' at the end of each line with .strip()
     lines = [x.strip() for x in lines]
-    #Concatenate everything into one string.
-    number_str = ''.join(lines)
-    
-    #Now we are going to slide across this number from left to right with a
-    #slider that is 13 digits long. For example, if we had a 3-digit-long
-    #slider on the number 9876789, our analysis would look like:
+    # Concatenate everything into one string.
+    number_str = "".join(lines)
+
+    # Now we are going to slide across this number from left to right with a
+    # slider that is 13 digits long. For example, if we had a 3-digit-long
+    # slider on the number 9876789, our analysis would look like:
     #    [987]6789, 9[876]789, 98[767]89, 987[678]9, 9876[789]
-    
-    number_len = len(number_str) #Find the amount of digits in the number.
-    slider_len = 13 #We have slider with space for 13 consecutive digits.
+
+    number_len = len(number_str)  # Find the amount of digits in the number.
+    slider_len = 13  # We have slider with space for 13 consecutive digits.
     max_product = 0
-    i=0 #i represents the index of the leftmost position in the slider relative
-        #to the entire number_str.
-    #Stop once the slider reaches the last possible 13-char-long string.
-    while i <= number_len-slider_len:
-        #list() turns the 13-char-long string of number_str under consideration
-        #into a list of 1-char-long strings.
-        digits = list(number_str[i:i+slider_len])
-        digits = digits[::-1] #Reverse the digits so we can find the rightmost
-        if '0' in digits:     #zero in the unreversed list first with index. 
-            skip = slider_len-digits.index('0')
-            i+=skip
+    i = 0  # i represents the index of the leftmost position in the slider relative
+    # to the entire number_str.
+    # Stop once the slider reaches the last possible 13-char-long string.
+    while i <= number_len - slider_len:
+        # list() turns the 13-char-long string of number_str under consideration
+        # into a list of 1-char-long strings.
+        digits = list(number_str[i : i + slider_len])
+        digits = digits[::-1]  # Reverse the digits so we can find the rightmost
+        if "0" in digits:  # zero in the unreversed list first with index.
+            skip = slider_len - digits.index("0")
+            i += skip
             continue
         product = 1
         for digit in digits:
-            product*=int(digit)
-        if product>max_product:
+            product *= int(digit)
+        if product > max_product:
             max_product = product
-        i+=1
+        i += 1
     return max_product
 
-start = timeit.default_timer()
-answer = PE8_while() #23514624000 found in 0.000848456625703875 seconds
-elapsed_while = (timeit.default_timer() - start)
-print ('%s found in %s seconds' % (answer, elapsed_while))
 
-print('for/while = %s'%(elapsed_for/elapsed_while)      )  
+start = timeit.default_timer()
+answer = PE8_while()  # 23514624000 found in 0.000848456625703875 seconds
+elapsed_while = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed_while))
+
+print("for/while = %s" % (elapsed_for / elapsed_while))
 """
 After implementing the while loop, we see that it is actually about 15% faster
 in this situation.

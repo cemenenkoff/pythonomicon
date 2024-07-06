@@ -8,28 +8,34 @@ Created on Sun Dec  9 15:01:17 2018
 to 10 without any remainder. What is the smallest positive number that is
 evenly divisible by all of the numbers from 1 to 20?
 """
-#Note that the number is at minimum a product of the primes below 20.
-#9699690=2*3*5*7*11*13*17*19
+
+
+# Note that the number is at minimum a product of the primes below 20.
+# 9699690=2*3*5*7*11*13*17*19
 def PE5():
-    for num in range(9699690,10**9,10): #Skipping by 10s, we get 2 and 5 free.
-        if ((((num/2)/2)/2)%2)==0: #Next we check 16 and get 4, 8, and 20 free.
-            if ((num/3)%3)==0: #Next is 9 which gives us 6, 12, 15, 18 free.
-                if num%7==0: #Check 7 and get 14 free.
-                    if num%11==0: #Check 11.
-                        if num%13==0: #Check 13.
-                            if num%17==0: #Check 17.
-                                if num%19==0: #Check 19.
+    for num in range(9699690, 10**9, 10):  # Skipping by 10s, we get 2 and 5 free.
+        if (
+            (((num / 2) / 2) / 2) % 2
+        ) == 0:  # Next we check 16 and get 4, 8, and 20 free.
+            if ((num / 3) % 3) == 0:  # Next is 9 which gives us 6, 12, 15, 18 free.
+                if num % 7 == 0:  # Check 7 and get 14 free.
+                    if num % 11 == 0:  # Check 11.
+                        if num % 13 == 0:  # Check 13.
+                            if num % 17 == 0:  # Check 17.
+                                if num % 19 == 0:  # Check 19.
                                     return num
 
+
 import timeit
+
 start = timeit.default_timer()
 answer = PE5()
-elapsed = (timeit.default_timer() - start)
-print ('%s found in %s seconds' % (answer,elapsed))
-#232792560 found in 5.440448999404907 seconds 
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))
+# 232792560 found in 5.440448999404907 seconds
 
 """
-The answer can actually be found directly by starting with 2*3*5*7*11*13*17*19 
+The answer can actually be found directly by starting with 2*3*5*7*11*13*17*19
 and then incrementing the powers by looking at the prime factorizations of each
 divisor starting from 20 downward; choosing increment when a factor requires a
 greater power on a subfactor. For example, 20=2**2*5 requires 2**2, so

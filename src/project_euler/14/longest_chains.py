@@ -21,26 +21,31 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 """
 import numpy as np
+
+
 def evens_within(start, end):
-    if start%2==0:
-        startmap = start/2
+    if start % 2 == 0:
+        startmap = start / 2
     else:
-        startmap = (start+1)/2
-    if end%2==0:
-        endmap = (end-2)/2
+        startmap = (start + 1) / 2
+    if end % 2 == 0:
+        endmap = (end - 2) / 2
     else:
-        endmap = (end-1)/2
+        endmap = (end - 1) / 2
     diff = end - start
-    if diff%2==0:
-        num_evens = diff/2 #number of even ints in [start_, end_)
+    if diff % 2 == 0:
+        num_evens = diff / 2  # number of even ints in [start_, end_)
     else:
-        if start%2==0:
-            num_evens = np.ceil(diff/2)
+        if start % 2 == 0:
+            num_evens = np.ceil(diff / 2)
         else:
-            num_evens = diff//2
-    print('The %6d even integers from [%6d, %-7d) map out [%6d, %-6d]'\
-        % (num_evens, start, end, startmap, endmap) )
-    return startmap, endmap+1
+            num_evens = diff // 2
+    print(
+        "The %6d even integers from [%6d, %-7d) map out [%6d, %-6d]"
+        % (num_evens, start, end, startmap, endmap)
+    )
+    return startmap, endmap + 1
+
 
 """
 At first I thought to only use brute force, but that seemed like a cop out.
@@ -89,25 +94,28 @@ Notice if we connect all of the mapped out intervals, they produce [1,499999]
 checking by starting at 500000 instead of 1.
 """
 
+
 def PE14():
     max_chain = 0
     max_n = 0
-    for n in range(500000,10**6):
-        n_=n #save the original n for later
-        chain=0
-        while n>1:
-            if n%2==0:
-                n//=2
+    for n in range(500000, 10**6):
+        n_ = n  # save the original n for later
+        chain = 0
+        while n > 1:
+            if n % 2 == 0:
+                n //= 2
             else:
-                n=3*n+1
-            chain+=1
+                n = 3 * n + 1
+            chain += 1
         if chain > max_chain:
             max_chain = chain
             max_n = n_
     return max_n
 
+
 import timeit
+
 start = timeit.default_timer()
-answer = PE14() #837799 found in 8.745221884817056 seconds
-elapsed = (timeit.default_timer() - start)
-print('%s found in %s seconds'%(answer, elapsed))
+answer = PE14()  # 837799 found in 8.745221884817056 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))

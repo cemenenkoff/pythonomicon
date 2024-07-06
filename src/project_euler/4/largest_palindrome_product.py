@@ -10,14 +10,16 @@ the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest
 palindrome made from the product of two 3-digit numbers.
 """
 
-def PE4(min=100,max=999):
+
+def PE4(min=100, max=999):
     max_pal = 0
-    for num1 in range(min,max+1):
-        for num2 in range(num1,max+1): #*1
-            prod = num1*num2
-            if prod>max_pal and str(prod)==str(prod)[::-1]:#*2
+    for num1 in range(min, max + 1):
+        for num2 in range(num1, max + 1):  # *1
+            prod = num1 * num2
+            if prod > max_pal and str(prod) == str(prod)[::-1]:  # *2
                 max_pal = prod
     return max_pal
+
 
 """
 *1: Changing the lower bound to num1 avoids redundant calculations. For
@@ -32,7 +34,8 @@ palindrome found so far, because if it isn't, we should just move on without
 taking the time to perform the more costly check to see if it's a palindrome.
 """
 import timeit
+
 start = timeit.default_timer()
-answer = PE4() #906609 found in 0.03671574143040522 seconds
-elapsed = (timeit.default_timer() - start)
-print ('%s found in %s seconds' % (answer, elapsed))
+answer = PE4()  # 906609 found in 0.03671574143040522 seconds
+elapsed = timeit.default_timer() - start
+print("%s found in %s seconds" % (answer, elapsed))
