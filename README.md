@@ -1,4 +1,4 @@
-# Crack the Code: Upgrading Academic Coding
+# Coding Essentials for STEM Wizards
 # ![logo](img/data-circles.png)
 
 # 1. Introduction
