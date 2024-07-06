@@ -1,11 +1,14 @@
-# Coding Essentials for STEM Wizards
-# ![logo](img/data-circles.png)
+# Python Essentials for STEM Wizards
+![logo](img/enthalpy-wizardry.webp)
 
-# 1. Introduction
-This repository is like a gym for your coding skills. It's designed for those who excel in math, statistics, or data analysis but have gaps in software engineering. If you're great academically but struggle with coding, this repo is perfect for you, no matter what data-based job you're aiming for.
+# 1. Introduction (to the Job Market)
+![logo](img/data-circles.png)
+
+This repository is for STEM graduates who want to become software professionals. It's designed for those who excel in math, statistics, or data analysis but have knowledge gaps in software engineering. If you're great academically, but struggle with coding, this repo is perfect for you, no matter what data-based job you're aiming for.
 
 ## 1.1 Background
-When I graduated in math and physics, I had some [Python](https://www.python.org/) experience, but only in a research context. I needed to shift my thinking to a more computational approach. I realized that strong software skills could help solve complex problems. I found [Project Euler](projecteuler.net), a website focused on solving progressively challenging math problems with code, and thought it was the perfect place to start. Later, I found [LeetCode](https://leetcode.com/) was also crucial for improving.
+
+When I graduated in math and physics, I had only worked with [Python](https://www.python.org/) in a research setting, and my clunky code was holding me back. I needed to shift my thinking to a more computational approach. I realized that strong software skills could help solve complex problems. I found [Project Euler](projecteuler.net), a website focused on solving progressively challenging math problems with code, and thought it was the perfect place to start. Later, I found [LeetCode](https://leetcode.com/) was also crucial for improving.
 
 ## 1.2 Purpose
 After six years as a professional developer, I've added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while also solving [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net) problems. If you're strong in math but need to improve your computer skills, this repository is for you.
@@ -15,29 +18,33 @@ If you've used [R](https://www.r-project.org/) or [Python](https://www.python.or
 
 ## 2.1 Python
 First, visit the [downloads section](https://www.python.org/downloads/) of the official Python website and download the latest version of the Python installer for Windows.
-# ![logo](img/readme/download-python.png)
+
+![logo](img/readme/download-python.png)
+
 Unless you have a specific reason to use something older, use the latest version (e.g. TensorFlow is [incompatible with Python > 3.11](https://www.tensorflow.org/install) as of writing this). Does this mean if we want to use TensorFlow, we have to uninstall the latest version of Python? No. We can use different Python versions for different projects, but we'll tackle that a little later.
 
 Go to wherever you downloaded the installer, then run it.
-# ![logo](img/readme/open-in-folder.png)
-# ![logo](img/readme/installer-add-to-path-customize.png)
+![logo](img/readme/open-in-folder.png)
+![logo](img/readme/installer-add-to-path-customize.png)
 The **☑ Add python.exe to PATH** option during installation configures your Windows system to recognize Python commands from *any* command prompt.
-# ![logo](img/readme/installer-optional-features.png)
+
+![logo](img/readme/installer-optional-features.png)
 The only people who need to install Python globally work in IT. Even if you're on a company laptop, just install Python for yourself.
-# ![logo](img/readme/installer-advanced-options.png)
+
+![logo](img/readme/installer-advanced-options.png)
 The **☑ Add Python to Environment Variables** option is equivalent to **☑ Add python.exe to PATH**. We want to set up the system's environment variables to include the directory where Python is installed.
 
 Again, this allows the operating system to locate Python executables and scripts from *any* command line or terminal without needing to specify the full path (i.e. `C:\Users\Cemenenkoff\AppData\...\python.exe`). Instead, we can access Python by simply typing `python` in the shell.
 
-# ![logo](img/readme/installer-setup-successful.png)
+![logo](img/readme/installer-setup-successful.png)
 After installation, we can verify Python is correctly installed by opening Command Prompt and typing `python --version`, which should display the installed version of Python.
 
-# ![logo](img/readme/verify-install.png)
+![logo](img/readme/verify-install.png)
 
 ## 2.2 Git Bash  <img height=25 src="img/readme/git-bash-logo.png" style="vertical-align: bottom;"/>
 Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) or [PowerShell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell), I prefer using [Git Bash](https://git-scm.com/) because it is cross-platform and designed for Git, the near-ubiquitous version control system. Download the [latest stable build](https://git-scm.com/download/win) and install it with the default recommended settings.
 
-## 2.3 Notepad++ <img height=25 src="img/readme/notepad-logo-white.png" style="vertical-align: bottom;"/>
+## 2.3 Notepad++ <img height=30 src="img/readme/notepad-logo-white.png" style="vertical-align: bottom;"/>
 [Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default Notepad. If we were to code Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash, our preferred terminal. Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
 
 ## 2.4 VS Code <img height=25 src="img/readme/vs-code-logo.png" style="vertical-align: bottom;"/>
@@ -46,7 +53,11 @@ Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/adm
 ### 2.4.1 The Integrated Terminal
 VS Code has a **built-in terminal** that allows us to run command-line operations without needing to switch windows. Be sure to set the default integrated terminal to `bash`.
 
-# ![logo](img/readme/set-bash-default.png)
+
+
+<p align="center">
+  <img src="img/readme/set-bash-default.png" alt="logo" width="300"/>
+</p>
 
 ### 2.4.2 Hotkeys
 Using hotkeys is the key to making coding feel comfortable and natural. It's essential to **automate your workflow**, and the less you have to move the mouse, the better your wrists will feel.
@@ -137,7 +148,7 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
 Black defaults to 88 characters per line while PEP8 uses between 72 and 99 characters. Keeping all of this in mind, I set up my user settings to highlight certain line lengths (i.e. rulers), wrap at 88 characters, set my file explorer to the right side, have my files save when changing cursor focus, use One Dark Pro, and other preferences. [Here is a link to the standard one I use](doc/settings.json).
 
 Note that these settings are *user* settings, so they must be set by accessing **Preferences: Open User Settings (JSON)** from the command palette. Remember, `Ctrl` + `Shift` + `P` opens the command palette.
-# ![logo](img/readme/command-palette-user-settings.png)
+![logo](img/readme/command-palette-user-settings.png)
 
 After the *user* `settings.json` file is open, you can copy-and-paste my settings file, but note that ***it assumes all previously-mentioned extensions are installed***.
 
@@ -145,7 +156,7 @@ After the *user* `settings.json` file is open, you can copy-and-paste my setting
 Virtual environments are *essential* for managing project dependencies. They allow us to avoid the hassle of reinstalling Python multiple times when different projects require different versions (e.g., Python 3.8 vs. 3.12).
 
 ### 2.3.1 Global vs. Local Workspaces
-# ![logo](img/readme/virtual-environments.png)
+![logo](img/readme/virtual-environments.png)
 In a **global workspace**, Python packages are installed system-wide. While convenient for system tools and widely used libraries, this approach can lead to version conflicts and unintended updates across projects.
 
 A **local workspace**, on the other hand, utilizes Virtual Environments to isolate project-specific dependencies. By creating a virtual environment for each project, we can install packages without affecting the system-wide Python installation. This isolation ensures that each project operates with its own set of dependencies, maintaining consistency and stability.
@@ -305,4 +316,8 @@ As we want to automate our workflow further, we can introduce some of these addi
 If you've made it this far, bravo. It's a lot of condensed information, but it's the core of developing like a software engineer. Practicing these principles and workflows alongside coding concepts and data projects is the difference between pushing a project to production or having it sit in a closet as a prototype. [Docker containers](https://www.docker.com/resources/what-container/) are relevant to this idea, but are outside of the scope of this practice repo.
 
 ## 5.1 Where to Go from Here?
-If you were able to use these concepts to clone or fork this repository to start developing solutions to Project Euler or LeetCode problems, treat this repo as a gym. It's a place to show up every day and keep your mind and software skills sharp. Don't just solve problems, but practice your workflows, and keep on top of your Github profile. Remember that consistency is key, and strength builds over time.
+If you were able to use these concepts to clone or fork this repository to start developing solutions to Project Euler or LeetCode problems, treat this repo as a gym. It's a place to show up every day and keep your mind and software skills sharp. Don't just solve problems, but practice your workflows, and keep on top of your Github profile. Remember that consistency is key, and strength builds over time. You can't become a wizard in a day.
+
+<p align="center">
+  <img src="img/python-wizard-hat.png" alt="logo" width="200"/>
+</p>
