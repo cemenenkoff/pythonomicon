@@ -31,6 +31,8 @@ from typing import Optional
 
 
 class ListNode:
+    """Note that a linked list is visualized like [Head] -> [Node] -> ... -> [Tail]"""
+
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
@@ -40,7 +42,7 @@ class Solution:
     def add_two_numbers(
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
-        dummy_head = ListNode()
+        dummy_head = ListNode()  # The dummy head of this linked list is 0.
         tail = dummy_head
         carry = 0
 
@@ -78,7 +80,7 @@ if __name__ == "__main__":
     l1 = ListNode(2, ListNode(4, ListNode(3)))
     l2 = ListNode(5, ListNode(6, ListNode(4)))
     result = Solution().add_two_numbers(l1, l2)
-    # Print the result in the expected output format
+    # Print the result in the expected output format.
     output = []
     while result:
         output.append(result.val)
