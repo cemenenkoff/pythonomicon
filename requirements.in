@@ -23,7 +23,9 @@ pyproject_hooks==1.1.0
 python-dateutil==2.9.0.post0
 pytz==2024.1
 PyYAML==6.0.1
+setuptools==70.2.0
 six==1.16.0
 tomli==2.0.1
 tzdata==2024.1
 virtualenv==20.26.3
+wheel==0.43.0
