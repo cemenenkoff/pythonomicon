@@ -41,7 +41,7 @@
 # 1. Introduction (to the Job Market)
 ![logo](img/readme/data-circles.png)
 
-This repository is for STEM graduates who want to become software professionals. It's designed for those who excel in math, statistics, or data analysis but have knowledge gaps in software engineering. If you're great academically, but struggle with coding, this repo is perfect for you, no matter what data-based job you're aiming for.
+***This repository is for STEM graduates who want to become software professionals.*** It's designed for those who excel in math, statistics, or data analysis but have knowledge gaps in software engineering. If you're great academically, but struggle with coding, this repo is perfect for you, no matter what data-based job you're aiming for.
 
 <!-- TOC --><a name="11-background"></a>
 ## 1.1 Background
@@ -49,11 +49,11 @@ When I graduated in math and physics, I had only worked with [Python](https://ww
 
 <!-- TOC --><a name="12-purpose"></a>
 ## 1.2 Purpose
-After six years as a professional developer, I've added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while also solving [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net) problems. If you're strong in math but need to improve your computer skills, this repository is for you.
+After six years as a professional developer, I've added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). If you're strong in math but need to improve your computer skills, this repository is for you.
 
 <!-- TOC --><a name="2-environment-setup"></a>
 # 2. Environment Setup <img height=25 src="img/readme/windows-logo.png" style="vertical-align: bottom;"/>
-If you've used [R](https://www.r-project.org/) or [Python](https://www.python.org/) in research, you may have used [Anaconda](https://www.anaconda.com/) to simplify setup, package installation, and writing prototype code. However, staying in this tutorial zone can limit you. Learning to set up Python and interact with your computer's filesystem is crucial foundational knowledge, even if it's frustrating at first.
+If you've used [R](https://www.r-project.org/) or [Python](https://www.python.org/) in research, you may have used [Anaconda](https://www.anaconda.com/) to simplify setup and package installation to jump right into coding. Staying in this tutorial zone limits our growth and ability to push to production. Learning to set up Python and interact with your computer's filesystem is crucial foundational knowledge, even if it's frustrating at first.
 
 <!-- TOC --><a name="21-python"></a>
 ## 2.1 Python <img height=25 src="img/readme/python-logo.webp" style="vertical-align: bottom;"/>
@@ -220,14 +220,14 @@ Once your workspace folder is open, do the following:
    1. What is `pip install`?
       1. In Python, `pip` stands for "Pip Installs Packages" and it's the default package installer for Python. We use it to install packages from the [Python Package Index (PyPI)](https://pypi.org/). `install` is just one of the many commands available, and you can use `pip help` to see a list of all available commands.
    2. What is `virtualenv`?
-      1. [`virtualenv` is a package](https://virtualenv.pypa.io/en/latest/) for setting up virtual environments. While Python *does* already have a package that does this called `venv`, it is *only* compatible with Python >= 3.3, whereas `virtualenv` runs on a wider range of versions, plus offers additional features for more complex development environments.
+      1. [`virtualenv`](https://virtualenv.pypa.io/en/latest/) is a package for setting up virtual environments. While Python *does* already have a package that does this called `venv`, it is *only* compatible with Python >= 3.3, whereas `virtualenv` runs on a wider range of versions, plus offers additional features for more complex development environments.
 2. Run `virtualenv venv`.
    1. This creates a virtual environment folder named `venv` in our workspace folder. It contains a sequestered installation of Python.
 3. Run `source venv/Scripts/activate`.
    1. This command runs a .bat ("batch") file (batch files are automation scripts file for Windows) that sets up and activates the environment.
 4. After the environment is activated, you should see `(venv)` above the first line of the terminal.
 
-<p align="left">
+<p align="center">
   <img src="img/readme/activate-venv.png" alt="logo" width="420"/>
 </p>
 
@@ -293,7 +293,7 @@ contourpy==1.2.1
 ## 3.1 Basic Git Overview
 Watch [this video by ByteByteGo](https://www.youtube.com/watch?v=e9lnsKot_SQ) for a great overview of Git.
 
-<p align="left">
+<p align="center">
   <img src="img/readme/git-how-does-it-work.jpg" alt="logo" height="600"/>
 </p>
 
@@ -321,7 +321,7 @@ The commands you'll use 99% of the time are:
 
 Rarely, you'll need additional commands when managing a complex code base. [This video by ByteByteGo](https://www.youtube.com/watch?v=0chZFIZLR_0) is a great introduction to them.
 
-<p align="left">
+<p align="center">
   <img src="img/readme/git-merge-rebase.jfif" alt="logo" height="600"/>
 </p>
 
