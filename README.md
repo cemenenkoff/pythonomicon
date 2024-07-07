@@ -42,21 +42,21 @@
 # 1. Introduction (to the Job Market)
 ![logo](img/data-circles.png)
 
-***This repository is for STEM graduates who want to become software professionals.*** It's designed for those who excel in math, statistics, or data analysis but have knowledge gaps in software engineering. If you're great academically, but struggle with coding, this repo is perfect for you, no matter what data-based job you're aiming for.
+***This repository is for STEM graduates who want to become software professionals.*** It's designed for those who excel in science, statistics, or data analysis but have knowledge gaps in software engineering. If you're great academically but less great with coding, this repo is perfect for you no matter what data-based job you're aiming for.
 
 <!-- TOC --><a name="11-background"></a>
 ## 1.1 Background
-When I graduated in math and physics, I had only worked with [Python](https://www.python.org/) in a research setting, and my clunky code was holding me back. I needed to shift my thinking to a more computational approach. I realized that strong software skills could help solve complex problems. I found [Project Euler](projecteuler.net), a website focused on solving progressively challenging math problems with code, and thought it was the perfect place to start. Later, I found [LeetCode](https://leetcode.com/) was also crucial for improving.
+After graduating with degrees in math and physics, I had only used [Python](https://www.python.org/) in a research setting. My clunky code was holding me back. I needed to adopt a more computational approach to break new ground (e.g. a one-month runtime is unreasonable). I realized that deepening my understanding of software principles was key to solving more complex numerical problems. I then discovered [Project Euler](projecteuler.net), a website focused on solving progressively challenging math problems with code. It was the perfect place to start. Later, I found that [LeetCode](https://leetcode.com/) was also crucial for improving, as it reinforces coding with efficient, industry-standard data structures.
 
 <!-- TOC --><a name="12-purpose"></a>
 ## 1.2 Purpose
-After six years as a professional developer, I've revisited this practice repository to enhance it with tools, tips, and tutorials that I wish I had when starting out. This repository covers the essentials of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). It's designed to help you improve your computer skills, especially if you have a strong math background.
+After six years as a professional developer, I've returned to this practice repo and enhanced it with tools, tips, and tutorials I wish I'd have been given starting out. This repository covers the essentials of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). It's designed to help you improve your computer skills, especially if you have a strong math background.
 
 Please note, this repository does *not* focus on creating elaborate data science projects or complex machine learning models. Instead, it emphasizes the engineering principles and efficient data structures essential for developing robust, high-performance software.
 
 <!-- TOC --><a name="2-environment-setup"></a>
 # 2. Environment Setup <img height=20 src="img/windows-logo.png" style="vertical-align: bottom;"/>
-If you've used [R](https://www.r-project.org/) or [Python](https://www.python.org/) in research, you may have used [Anaconda](https://www.anaconda.com/) to simplify setup and package installation to jump right into coding. Staying in this tutorial zone limits our growth and ability to push to production. Learning to set up Python and interact with your computer's filesystem is crucial foundational knowledge, even if it's frustrating at first.
+If you've used [R](https://www.r-project.org/) or [Python](https://www.python.org/) in research, you may have used [Anaconda](https://www.anaconda.com/) to simplify setup and package installation to jump right into coding. Staying in this tutorial zone limits your growth and ability to **push to production**. Learning to set up Python and interact with your computer's filesystem is crucial foundational knowledge, even if it's frustrating at first.
 
 <!-- TOC --><a name="21-python"></a>
 ## 2.1 Python <img height=20 src="img/python-logo.webp" style="vertical-align: bottom;"/>
@@ -64,11 +64,9 @@ First, visit the [downloads section](https://www.python.org/downloads/) of the o
 
 ![logo](img/download-python.png)
 
-Unless you have a specific reason to use something older, use the latest version (e.g. TensorFlow is [incompatible with Python > 3.11](https://www.tensorflow.org/install) as of writing this). Does this mean if we want to use TensorFlow, we have to uninstall the latest version of Python? No. We can use different Python versions for different projects, but we'll tackle that a little later.
+Unless you have a specific reason to use something older, use the latest version (e.g. TensorFlow is [incompatible with Python > 3.11](https://www.tensorflow.org/install) as of writing this). Does this mean if you want to use TensorFlow, you have to uninstall the latest version of Python? No. You can use different Python versions for different projects, but we'll tackle that a little later.
 
 Go to wherever you downloaded the installer, then run it.
-
-![logo](img/open-in-folder.png)
 
 ![logo](img/installer-add-to-path-customize.png)
 The **☑ Add python.exe to PATH** option during installation configures your Windows system to recognize Python commands from *any* command prompt.
@@ -77,12 +75,12 @@ The **☑ Add python.exe to PATH** option during installation configures your Wi
 The only people who need to install Python globally work in IT. Even if you're on a company laptop, just install Python for yourself.
 
 ![logo](img/installer-advanced-options.png)
-The **☑ Add Python to Environment Variables** option is equivalent to **☑ Add python.exe to PATH**. We want to set up the system's environment variables to include the directory where Python is installed.
+The **☑ Add Python to Environment Variables** option is the same as **☑ Add python.exe to PATH**. This sets up the system's [environment variables](https://kinsta.com/knowledgebase/what-is-an-environment-variable/) to include the directory where Python is installed.
 
-Again, this allows the operating system to locate Python executables and scripts from *any* command line or terminal without needing to specify the full path (i.e. `C:\Users\Cemenenkoff\AppData\...\python.exe`). Instead, we can access Python by simply typing `python` in the shell.
+This setup allows the operating system to locate Python executables and scripts from any command line or terminal without specifying the full path (e.g. `C:\Users\..\python.exe`). Instead, you can access Python by simply typing `python` in your chosen terminal.
 
 ![logo](img/installer-setup-successful.png)
-After installation, we can verify Python is correctly installed by opening Command Prompt and typing `python --version`, which should display the installed version of Python.
+After setup, verify that the installation was successful by opening Command Prompt and running `python --version`.
 
 ![logo](img/verify-install.png)
 
@@ -92,15 +90,15 @@ Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/adm
 
 <!-- TOC --><a name="23-notepad"></a>
 ## 2.3 Notepad++ <img height=22 src="img/notepad-logo.png" style="vertical-align: bottom;"/>
-[Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default Notepad. If we were to code in Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash, our preferred terminal. Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
+[Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default [Notepad](https://en.wikipedia.org/wiki/Windows_Notepad). If you were to code in Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash (my preferred terminal). Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
 
 <!-- TOC --><a name="24-vs-code"></a>
 ## 2.4 VS Code <img height=20 src="img/vs-code-logo.png" style="vertical-align: bottom;"/>
-[VS Code](https://code.visualstudio.com/) is the natural code editor for the modern developer on a Windows machine. It is free, open-source, lightweight, cross-platform, fast, customizable, and equipped with all modern coding tools in the same interface. Download the [latest stable build](https://code.visualstudio.com/) and install with default settings.
+[VS Code](https://code.visualstudio.com/) is *the* best code editor for the modern developer on a Windows machine. It is free, open-source, lightweight, cross-platform, fast, customizable, widely used, and equipped with all modern coding tools in the same interface. Download the [latest stable build](https://code.visualstudio.com/) and install it with the default settings.
 
 <!-- TOC --><a name="241-the-integrated-terminal"></a>
 ### 2.4.1 The Integrated Terminal
-VS Code has a **built-in terminal** that allows us to run command-line operations without needing to switch windows. Be sure to ***set the default integrated terminal to Git Bash***.
+VS Code has a **built-in terminal** that allows you to run command-line operations without needing to switch windows. Be sure to ***set the default integrated terminal to Git Bash***.
 
 <p align="left">
   <img src="img/set-bash-default.png" alt="logo" width="300"/>
@@ -108,9 +106,9 @@ VS Code has a **built-in terminal** that allows us to run command-line operation
 
 <!-- TOC --><a name="242-hotkeys"></a>
 ### 2.4.2 Hotkeys
-Using hotkeys is the key to making coding feel comfortable and natural. It's essential to **automate your workflow**, and the less you have to move the mouse, the better your wrists will feel.
+Using hotkeys is the key to making coding feel comfortable and natural. It's essential to **automate your workflow**, and the less you have to move the mouse, [the better your wrists will feel](https://x-team.com/blog/avoid-carpal-tunnel-syndrome).
 
-VS Code is fully accessible from the keyboard. The most important key combination to know is `Ctrl` + `Shift` + `P`, which brings up the Command Palette. From here, you have access to all functionality within VS Code, including keyboard shortcuts for the most common operations. Here are some of the most useful ones for beginners.
+VS Code is fully accessible from the keyboard. The most important key combination to know is `Ctrl` + `Shift` + `P`, which brings up the Command Palette. From there, you have access to all functionality within VS Code, including keyboard shortcuts for the most common operations. Here are some of the most useful ones for beginners.
 
 | Shortcut                 | Action                               |
 |--------------------------|--------------------------------------|
@@ -118,7 +116,7 @@ VS Code is fully accessible from the keyboard. The most important key combinatio
 | `Ctrl` + `/`             | Toggle Line Comment                  |
 | `Shift` + `Alt` + `↑`    | Copy Line Up (or Down `↓`)           |
 | `Alt` + `←`              | Go Back (or Forward `→`)             |
-| `Alt` + `→`              | Go Forward                           |
+| `Alt` + `↑`              | Move Line Up (or Down `↓`)           |
 | `Ctrl` + `D`             | Add Selection to Next Find Match     |
 | `Ctrl` + `X`             | Cut (the Entire Line)                |
 | `Ctrl` + `K` `Ctrl` + `O`| File: Open Folder...                 |
@@ -130,9 +128,9 @@ VS Code is fully accessible from the keyboard. The most important key combinatio
 
 <!-- TOC --><a name="243-the-debugger"></a>
 ### 2.4.3 The Debugger
-In a professional context, the [debugger](https://code.visualstudio.com/docs/editor/debugging) is crucial for solving bugs. While print statements have their place, ***the debugger is the most important tool for identifying errors***.
+In a professional context, the [debugger](https://code.visualstudio.com/docs/editor/debugging) is *crucial* for solving bugs. While print statements have their place, ***the debugger is the most important tool for identifying critical issues or production bugs***.
 
-Like the built-in terminal, VS Code has a **built-in debug console**. When running a script with the debugger, you can explore variable states and the call stack when paused at a breakpoint.
+Like the built-in terminal, VS Code has a **built-in debug console**. When running a script with the debugger, you can explore variable states and the [call stack](https://en.wikipedia.org/wiki/Call_stack) when paused at a [breakpoint](https://en.wikipedia.org/wiki/Breakpoint).
 
 By default, VS Code creates a *new* terminal for each debug run. This can consume unnecessary RAM, especially for new programmers who don't need previous debug outputs. To avoid this, configure VS Code to send output to the integrated debug console, clearing history after each run. This setting is managed in something called the `launch.json` file that appears in the dynamically-generated `.vscode` folder when debugging is prompted (with `F5`). [Here is the standard one I use](.vscode/launch.json).
 
@@ -163,75 +161,76 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
    - This theme's syntax highlighting and clever use of italics ease frustration by making code more readable.
 
 2. **[Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) by Phillipp Kief**
-   - Colored icons simplify finding different file types in repositories with various supplemental files and directories.
+   - This theme enhances the VS Code file explorer with colored icons, making file searching simpler.
 
 3. **[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) by Yu Zhang**
-   - Allows for editing and previewing Markdown documentation directly in VS Code, streamlining the documentation workflow.
+   - This extension allows for editing and previewing Markdown documentation directly in VS Code, streamlining documentation workflow.
 
 4. **[Markdown PDF](https://github.com/yzane/vscode-markdown-pdf) by yzane**
-   - Converts Markdown documents into PDF format with ease.
+   - Convert Markdown documents into PDF format with ease if you ever need to email a report.
 
 5. **[Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) by mechatroner**
-   - Makes reading comma-separated values directly in VS Code possible, eliminating the need for Excel.
+   - Rainbow CSV makes reading comma-separated values directly in VS Code possible, reducing time spent context switching (to Excel 😖).
 
 6. **[vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) by tomoki1207**
-   - Enables viewing PDF files directly in VS Code, reducing context switching.
+   - With this, you can view PDF files directly in VS Code, reducing context switching.
 
 7. **[Python Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent) by Kevin Rose**
-   - Automatically indents Python code to the correct level, reducing keystrokes and improving readability without distraction.
+   - These extension automatically indents Python code to the correct level as you write new lines, reducing keystrokes and improving readability without distraction.
 
 8. **[RUFF](https://astral.sh/ruff) by Astral Software**
-   - Automatically formats Python code in modern [Black](https://github.com/psf/black) style, eliminating the need for manual formatting. I would recommend adding these keyboard shortcuts for RUFF formatting:
-
+   - Automatically format your Python code in modern [Black](https://github.com/psf/black) style, practically eliminating the need for manual formatting. I also recommend adding these keyboard shortcuts for RUFF formatting:
     ![logo](img/ruff-keyboard-shortcuts.png)
 
 9. **[isort](https://github.com/microsoft/vscode-isort) by Microsoft**
-   - Consistently sorts imports, enhancing code readability. Combined with RUFF, we can auto-format everything in our Python scripts except comments and docstrings.
+   - This extension consistently sorts imports, enhancing code readability. Combined with RUFF, you can auto-format nearly everything in your Python scripts (except some comments and docstrings).
 
 10.  **[autoDocstring: VSCode Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) by Nils Werner**
-   - Dynamically creates [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) based on a function's definition, saving significant time, giving us that last piece of formatting automation.
+   - Dynamically create [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) based on a function's definition. This gives you that last piece of formatting automation.
 
 <!-- TOC --><a name="245-automated-style-and-formatting"></a>
 ### 2.4.5 Automated Style and Formatting
-You should be spending as little time on formatting as possible. Using RUFF and autoDocstring eliminates 99% of any formatting you'll need to do, so you can focus on the problem at hand instead.
+***Spend as little time on formatting as possible.*** Using RUFF, isort, and autoDocstring eliminates 99% of any formatting you'll need to do. Solving the problem at hand should always be your main focus.
 
 <!-- TOC --><a name="2451-the-black-formatter"></a>
 #### 2.4.5.1 The Black Formatter
-*"[Black](https://github.com/psf/black) is an uncompromising Python code formatter that saves time and mental energy by automating code formatting, ensuring consistency, and reducing diffs for faster code reviews,"* according to its website. It is a modern improvement to the previous formatting standard, [PEP 8](https://peps.python.org/pep-0008/), and its the best modern way to format a Python code base. The RUFF extension utilizes Black when it performs its automated formatting.
+> *"[Black](https://github.com/psf/black) is an uncompromising Python code formatter that saves time and mental energy by automating code formatting, ensuring consistency, and reducing diffs for faster code reviews."*
+
+The Black formatting standard is a modern improvement to the previous one, [PEP 8](https://peps.python.org/pep-0008/), and it's *the best* modern way to format a Python code base. The RUFF extension utilizes Black when it performs automated formatting.
 
 <!-- TOC --><a name="246-customizing-user-settings"></a>
 ### 2.4.6 Customizing User Settings
-Black defaults to 88 characters per line while PEP8 uses between 72 and 99 characters. Keeping all of this in mind, I set up my user settings to highlight certain line lengths (i.e. rulers), wrap at 88 characters, set my file explorer to the right side, have my files save when changing cursor focus, use One Dark Pro, and other preferences. [Here is a link to the user `settings.json` file I use while developing](config/settings.json).
+Black defaults to [88 characters per line](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-length) while PEP8 uses between [72 and 99 characters](https://peps.python.org/pep-0008/#maximum-line-length). Keeping all of this in mind, I configured my user settings to include highlighting certain line lengths (i.e. rulers) and wrapping text at 88 characters. [Here is a link to the user `settings.json` file I use while developing](config/settings.json).
 
 Note that these settings are *user* settings, so they must be set by accessing **Preferences: Open User Settings (JSON)** from the command palette. Remember, `Ctrl` + `Shift` + `P` opens the command palette.
 
 ![logo](img/command-palette-user-settings.png)
 
-After the *user* `settings.json` file is open, you can copy-and-paste my settings file, but note that ***it assumes all previously-mentioned extensions are installed***.
+After the user `settings.json` file is open, you can copy-and-paste my settings file, but note that ***it assumes all previously-mentioned extensions are installed***.
 
 <!-- TOC --><a name="25-virtual-environments"></a>
 ## 2.5 Virtual Environments
-Virtual environments are *essential* for managing project dependencies. They allow us to avoid the hassle of reinstalling Python multiple times when different projects require different versions (e.g., Python 3.8 vs. 3.12).
+Virtual environments are *essential* for managing project dependencies. They allow you to avoid the hassle of reinstalling Python multiple times when different projects require different versions (e.g., Python 3.8 vs. 3.12).
 
 <!-- TOC --><a name="251-global-vs-local-workspaces"></a>
 ### 2.5.1 Global vs. Local Workspaces
 ![logo](img/virtual-environments.png)
 In a **global workspace**, Python packages are installed system-wide. While convenient for system tools and widely used libraries, this approach can lead to version conflicts and unintended updates across projects.
 
-A **local workspace**, on the other hand, utilizes virtual environments to isolate project-specific dependencies. By creating a virtual environment for each project, we can install packages without affecting the system-wide Python installation. This isolation ensures that each project operates with its own set of dependencies, maintaining consistency and stability.
+A **local workspace**, on the other hand, utilizes virtual environments to isolate project-specific dependencies. By creating a virtual environment for each project, you can install packages without affecting the system-wide Python installation. This isolation ensures that each project operates with its own set of dependencies, maintaining consistency and stability.
 
-Local workspaces allow us to experiment with different package versions too, helping facilitate updating project **dependencies** (which can be a very frustrating process).
+Local workspaces allow you to experiment with different package versions too, helping facilitate updating project **dependencies** (which can be a very frustrating process).
 
 <!-- TOC --><a name="252-creating-a-virtual-environment"></a>
 ### 2.5.2 Creating a Virtual Environment
 Once your workspace folder is open, do the following:
 1. Run `pip install virtualenv`:
    1. What is `pip install`?
-      1. In Python, `pip` stands for "Pip Installs Packages" and it's the default package installer for Python. We use it to install packages from the [Python Package Index (PyPI)](https://pypi.org/). `install` is just one of the many commands available, and you can use `pip help` to see a list of all available commands.
+      1. In Python, `pip` stands for "Pip Installs Packages" and it's the default package installer for Python. It's used to install packages from the [Python Package Index (PyPI)](https://pypi.org/). `install` is just one of the many commands available, and you can use `pip help` to see a list of all available commands.
    2. What is `virtualenv`?
       1. [`virtualenv`](https://virtualenv.pypa.io/en/latest/) is a package for setting up virtual environments. While Python *does* already have a package that does this called `venv`, it is *only* compatible with Python >= 3.3, whereas `virtualenv` runs on a wider range of versions, plus offers additional features for more complex development environments.
 2. Run `virtualenv venv`.
-   1. This creates a virtual environment folder named `venv` in our workspace folder. It contains a sequestered installation of Python.
+   1. This creates a virtual environment folder named `venv` in your workspace folder. It contains a sequestered installation of Python (and the version can be specified with the `--python=python3.x` flag).
 3. Run `source venv/Scripts/activate`.
    1. This command runs a .bat ("batch") file (batch files are automation scripts file for Windows) that sets up and activates the environment.
 4. After the environment is activated, you should see `(venv)` above the first line of the terminal.
@@ -240,15 +239,15 @@ Once your workspace folder is open, do the following:
   <img src="img/activate-venv.png" alt="logo" width="420"/>
 </p>
 
-5. At this point, we have a blank slate to begin installing packages. If we are running someone else's project, they should have a `requirements.txt` file that lists out all modules necessary to get the software to work. To install these all in one go, run `pip install -r requirements.txt`.
+5. At this point, you have a blank slate to begin installing packages. If you are running someone else's project, they should have a `requirements.txt` file that lists out all modules necessary to get the software to work. To install these all in one go, run `pip install -r requirements.txt`.
 
 <!-- TOC --><a name="253-managing-dependencies"></a>
 ### 2.5.3 Managing Dependencies
-What if we want to make our own `requirements.txt` file? As our projects grow more complex, we'll need to import various Python libraries, each potentially requiring specific versions of *their* own dependencies. Without a proper system to manage these interconnected dependencies, things can quickly become a disorganized mess. A standard way to export currently-installed modules is with `pip freeze > requirements.txt`, but there is a better way.
+What if you want to make your own `requirements.txt` file? As your projects grow more complex, you'll need to import various Python libraries, each potentially requiring specific versions of *their* own dependencies. Without a proper system to manage these interconnected dependencies, things can quickly become a disorganized mess. A standard way to export currently-installed modules is with `pip freeze > requirements.txt`, but there is a better way.
 
 <!-- TOC --><a name="2531-managing-interlaced-dependencies"></a>
 #### 2.5.3.1 Managing Interlaced Dependencies
-By default, running `pip freeze > requirements.txt` exports a list of our project dependencies in a file named `requirements.txt`. For a project with four dependent modules, the results might look like this:
+By default, running `pip freeze > requirements.txt` exports a list of your project dependencies in a file named `requirements.txt`. For a project with four dependent modules, the results might look like this:
 
 ```
 build==1.2.1
@@ -343,15 +342,15 @@ Rarely, you'll need additional commands when managing a complex code base. [This
 
 <!-- TOC --><a name="32-general-strategy-to-git-development"></a>
 ## 3.2 General Strategy to Git Development
-After cloning a project and aunthenticating, we want to have a cohesive general approach to developing new features in our repo.
-1. 💾 ***Commit frequently.*** We want to maintain a clean commit history by committing frequently, logically separating changing with meaningful commit messages. This makes reading the commit history much easier in the future.
-2. ❌ ***Avoid partial pushes.*** Only push to remote when our work is ready, and avoid partial pushes. This is an essential practice to prevent bugs in production.
+After cloning a project and aunthenticating, you want to have a cohesive general approach to developing new features in your repo.
+1. 💾 ***Commit frequently.*** You want to maintain a clean commit history by committing frequently, logically separating changing with meaningful commit messages. This makes reading the commit history much easier in the future.
+2. ❌ ***Avoid partial pushes.*** Only push to remote when your work is ready, and avoid partial pushes. This is an essential practice to prevent bugs in production.
 3. 🌱 ***Develop on new branches.*** To make sure things don't get mixed up, its best to develop new features or bugfixes on new branches. Working solely on `master` is only really appropriate when you're the sole author of a project, and even still, creating new branches for particularly large feature changes saves a lot of headache if anything ever needs to be rolled back.
 
 <!-- TOC --><a name="33-usual-git-workflow"></a>
 ## 3.3 Usual Git Workflow
 Here's how my standard development process looks on a daily basis. Again, `merge` or `rebase` aren't used often, so they aren't a part of this flow.
-1. Clone the repository from its remote location to our local machine.
+1. Clone the repository from its remote location to your local machine.
    1. `git clone <url>`
       1. This can be done with SSH or HTTPS. SSH saves time in the long run and could be considered slightly more secure, but both methods are just fine.
 2. Make a new branch and switch to it.
@@ -361,7 +360,7 @@ Here's how my standard development process looks on a daily basis. Again, `merge
 3. Make changes locally by creating new files or editing existing ones.
 4. Add the changes to the Staging Area.
    1. `git add .`
-      1. Note that `.` means *all* files, but we could specify individual ones with `git add "myfile.txt"` if we wanted to.
+      1. Note that `.` means *all* files, but you could specify individual ones with `git add "myfile.txt"` if you wanted to.
 5. Commit the changes with a *meaningful* message (easier said than done):
    1. `git commit -m "asdf"`
 6. Repeat steps 3-5 for subsequent changes, paced at logical intervals.
@@ -376,17 +375,17 @@ Here's how my standard development process looks on a daily basis. Again, `merge
 
 Before you're a professional, you'll almost never collaborate with other devs on a coding project in the same repo, so merge conflicts are rare. However, once multiple team members begin working on the same codebase simultaneously, it can get messy.
 
-For instance, what happens if a colleague pushes a series of commits while we're in the middle of developing a feature? This situation calls for merging the changes, which is typically straightforward if they involve separate files. If the changes are in the same file however, merge conflicts can be created, and they need *tedious manual review* to resolve.
+For instance, what happens if a colleague pushes a series of commits while you're in the middle of developing a feature? This situation calls for merging the changes, which is typically straightforward if they involve separate files. If the changes are in the same file however, merge conflicts can be created, and they need *tedious manual review* to resolve.
 
 To avoid all of this headache:
 <!-- TOC --><a name="before-starting-work-always-git-pull"></a>
 ### ***Before starting work, always*** `git pull`.
 
-This way, we are always working from the latest version of our code base, and we're be less likely to have to perform a merge later.
+This way, you are always working from the latest version of your code base, and you're be less likely to have to perform a merge later.
 
 <!-- TOC --><a name="4-organizing-your-workspace"></a>
 # 4 Organizing Your Workspace
-Adopting virtual environments, Git, and a well-structured folder tree ***streamlines our dev workflow and reduces errors***. These practices are *foundational* for maintaining a clean, manageable, and scalable codebase, so its essential to practice them, even on personal projects.
+Adopting virtual environments, Git, and a well-structured folder tree ***streamlines your dev workflow and reduces errors***. These practices are *foundational* for maintaining a clean, manageable, and scalable codebase, so its essential to practice them, even on personal projects.
 
 <!-- TOC --><a name="41-organizing-the-file-explorer"></a>
 ## 4.1 Organizing the File Explorer
@@ -436,7 +435,7 @@ According to me, ***every repository worth its salt needs to have the following 
 - `requirements.txt`
   - A text file that lists the Python packages (including their specific versions) required for a project. It allows for easy installation of dependencies using `pip install -r requirements.txt`.
 
-As we want to automate our workflow further, we can introduce some of these intermediate configuration files. Although there are many others, most of my serious Python projects have used the following:
+As you want to automate your workflow further, you can introduce some of these intermediate configuration files. Although there are many others, most of my serious Python projects have used the following:
 - `.flake8`
   - Configuration file for [Flake8](https://flake8.pycqa.org/en/latest/), a tool that checks Python code against style guides (like [PEP 8](https://peps.python.org/pep-0008/)) and detects various programming errors.
 - `.gitattributes`
