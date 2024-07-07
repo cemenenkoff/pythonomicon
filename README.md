@@ -1,5 +1,6 @@
 # Python Essentials for STEM Wizards
 ![logo](img/readme/enthalpy-wizardry.webp)
+
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [1. Introduction (to the Job Market)](#1-introduction-to-the-job-market)
@@ -17,11 +18,11 @@
       + [2.4.5 Automated Style and Formatting](#245-automated-style-and-formatting)
          - [2.4.5.1 The Black Formatter](#2451-the-black-formatter)
       + [2.4.6 Customizing User Settings](#246-customizing-user-settings)
-   * [2.5 Virtual Environments](#23-virtual-environments)
-      + [2.5.1 Global vs. Local Workspaces](#231-global-vs-local-workspaces)
-      + [2.5.2 Creating a Virtual Environment](#232-creating-a-virtual-environment)
-      + [2.5.2 Managing Dependencies](#232-managing-dependencies)
-         - [2.5.3 `pip-tools` and `requirements.txt`](#233-pip-tools-and-requirementstxt)
+   * [2.5 Virtual Environments](#25-virtual-environments)
+      + [2.5.1 Global vs. Local Workspaces](#251-global-vs-local-workspaces)
+      + [2.5.2 Creating a Virtual Environment](#252-creating-a-virtual-environment)
+      + [2.5.3 Managing Dependencies](#253-managing-dependencies)
+         - [2.5.3.1 `pip-tools` and `requirements.txt`](#2531-pip-tools-and-requirementstxt)
 - [3. Git and Version Control](#3-git-and-version-control)
    * [3.1 Basic Git Overview](#31-basic-git-overview)
    * [3.2 General Strategy to Git Development](#32-general-strategy-to-git-development)
@@ -190,6 +191,8 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
 
 <!-- TOC --><a name="245-automated-style-and-formatting"></a>
 ### 2.4.5 Automated Style and Formatting
+You should be spending as little time on formatting as possible. Using RUFF and autoDocstring eliminates 99% of any formatting you'll need to do, so you can focus on the problem at hand instead.
+
 <!-- TOC --><a name="2451-the-black-formatter"></a>
 #### 2.4.5.1 The Black Formatter
 *"[Black](https://github.com/psf/black) is an uncompromising Python code formatter that saves time and mental energy by automating code formatting, ensuring consistency, and reducing diffs for faster code reviews,"* according to its website. It is a modern improvement to the previous formatting standard, [PEP 8](https://peps.python.org/pep-0008/), and its the best modern way to format a Python code base. The RUFF extension utilizes Black when it performs its automated formatting.
@@ -216,6 +219,7 @@ In a **global workspace**, Python packages are installed system-wide. While conv
 A **local workspace**, on the other hand, utilizes virtual environments to isolate project-specific dependencies. By creating a virtual environment for each project, we can install packages without affecting the system-wide Python installation. This isolation ensures that each project operates with its own set of dependencies, maintaining consistency and stability.
 
 Local workspaces allow us to experiment with different package versions too, helping facilitate updating project **dependencies** (which can be a very frustrating process).
+
 <!-- TOC --><a name="252-creating-a-virtual-environment"></a>
 ### 2.5.2 Creating a Virtual Environment
 Once your workspace folder is open, do the following:
@@ -236,12 +240,12 @@ Once your workspace folder is open, do the following:
 
 5. At this point, we have a blank slate to begin installing packages. If we are running someone else's project, they should have a `requirements.txt` file that lists out all modules necessary to get the software to work. To install these all in one go, run `pip install -r requirements.txt`.
 
-<!-- TOC --><a name="252-managing-dependencies"></a>
-### 2.5.2 Managing Dependencies
+<!-- TOC --><a name="253-managing-dependencies"></a>
+### 2.5.3 Managing Dependencies
 What if we want to make our own `requirements.txt` file? As our projects grow more complex, we'll need to import various Python libraries, each potentially requiring specific versions of *their* own dependencies. Without a proper system to manage these interconnected dependencies, things can quickly become a disorganized mess. A standard way to export currently-installed modules is with `pip freeze > requirements.txt`, but there is a better way.
 
-<!-- TOC --><a name="253-pip-tools-and-requirementstxt"></a>
-### 2.5.3 `pip-tools` and `requirements.txt`
+<!-- TOC --><a name="2531-pip-tools-and-requirementstxt"></a>
+#### 2.5.3.1 `pip-tools` and `requirements.txt`
 By default, running `pip freeze > requirements.txt` exports a list of our project dependencies in a file named `requirements.txt`.
 
 ```
