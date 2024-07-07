@@ -1,16 +1,16 @@
 # Python Essentials for STEM Wizards
-![logo](img/readme/enthalpy-wizardry.webp)
+![logo](img/enthalpy-wizardry.webp)
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [1. Introduction (to the Job Market)](#1-introduction-to-the-job-market)
    * [1.1 Background](#11-background)
    * [1.2 Purpose](#12-purpose)
-- [2. Environment Setup <img height=20 src="img/readme/windows-logo.png" style="vertical-align: bottom;"/>](#2-environment-setup)
-   * [2.1 Python <img height=20 src="img/readme/python-logo.webp" style="vertical-align: bottom;"/>](#21-python)
-   * [2.2 Git Bash  <img height=20 src="img/readme/git-bash-logo.png" style="vertical-align: bottom;"/>](#22-git-bash)
-   * [2.3 Notepad++ <img height=22 src="img/readme/notepad-logo.png" style="vertical-align: bottom;"/>](#23-notepad)
-   * [2.4 VS Code <img height=20 src="img/readme/vs-code-logo.png" style="vertical-align: bottom;"/>](#24-vs-code)
+- [2. Environment Setup <img height=20 src="img/windows-logo.png" style="vertical-align: bottom;"/>](#2-environment-setup)
+   * [2.1 Python <img height=20 src="img/python-logo.webp" style="vertical-align: bottom;"/>](#21-python)
+   * [2.2 Git Bash  <img height=20 src="img/git-bash-logo.png" style="vertical-align: bottom;"/>](#22-git-bash)
+   * [2.3 Notepad++ <img height=22 src="img/notepad-logo.png" style="vertical-align: bottom;"/>](#23-notepad)
+   * [2.4 VS Code <img height=20 src="img/vs-code-logo.png" style="vertical-align: bottom;"/>](#24-vs-code)
       + [2.4.1 The Integrated Terminal](#241-the-integrated-terminal)
       + [2.4.2 Hotkeys](#242-hotkeys)
       + [2.4.3 The Debugger](#243-the-debugger)
@@ -40,7 +40,7 @@
 
 <!-- TOC --><a name="1-introduction-to-the-job-market"></a>
 # 1. Introduction (to the Job Market)
-![logo](img/readme/data-circles.png)
+![logo](img/data-circles.png)
 
 ***This repository is for STEM graduates who want to become software professionals.*** It's designed for those who excel in math, statistics, or data analysis but have knowledge gaps in software engineering. If you're great academically, but struggle with coding, this repo is perfect for you, no matter what data-based job you're aiming for.
 
@@ -53,47 +53,47 @@ When I graduated in math and physics, I had only worked with [Python](https://ww
 After six years as a professional developer, I've returned to this practice repo and added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). If you're strong in math but need to improve your computer skills, this repository is for you.
 
 <!-- TOC --><a name="2-environment-setup"></a>
-# 2. Environment Setup <img height=20 src="img/readme/windows-logo.png" style="vertical-align: bottom;"/>
+# 2. Environment Setup <img height=20 src="img/windows-logo.png" style="vertical-align: bottom;"/>
 If you've used [R](https://www.r-project.org/) or [Python](https://www.python.org/) in research, you may have used [Anaconda](https://www.anaconda.com/) to simplify setup and package installation to jump right into coding. Staying in this tutorial zone limits our growth and ability to push to production. Learning to set up Python and interact with your computer's filesystem is crucial foundational knowledge, even if it's frustrating at first.
 
 <!-- TOC --><a name="21-python"></a>
-## 2.1 Python <img height=20 src="img/readme/python-logo.webp" style="vertical-align: bottom;"/>
+## 2.1 Python <img height=20 src="img/python-logo.webp" style="vertical-align: bottom;"/>
 First, visit the [downloads section](https://www.python.org/downloads/) of the official Python website and download the latest version of the Python installer for Windows.
 
-![logo](img/readme/download-python.png)
+![logo](img/download-python.png)
 
 Unless you have a specific reason to use something older, use the latest version (e.g. TensorFlow is [incompatible with Python > 3.11](https://www.tensorflow.org/install) as of writing this). Does this mean if we want to use TensorFlow, we have to uninstall the latest version of Python? No. We can use different Python versions for different projects, but we'll tackle that a little later.
 
 Go to wherever you downloaded the installer, then run it.
 
-![logo](img/readme/open-in-folder.png)
+![logo](img/open-in-folder.png)
 
-![logo](img/readme/installer-add-to-path-customize.png)
+![logo](img/installer-add-to-path-customize.png)
 The **☑ Add python.exe to PATH** option during installation configures your Windows system to recognize Python commands from *any* command prompt.
 
-![logo](img/readme/installer-optional-features.png)
+![logo](img/installer-optional-features.png)
 The only people who need to install Python globally work in IT. Even if you're on a company laptop, just install Python for yourself.
 
-![logo](img/readme/installer-advanced-options.png)
+![logo](img/installer-advanced-options.png)
 The **☑ Add Python to Environment Variables** option is equivalent to **☑ Add python.exe to PATH**. We want to set up the system's environment variables to include the directory where Python is installed.
 
 Again, this allows the operating system to locate Python executables and scripts from *any* command line or terminal without needing to specify the full path (i.e. `C:\Users\Cemenenkoff\AppData\...\python.exe`). Instead, we can access Python by simply typing `python` in the shell.
 
-![logo](img/readme/installer-setup-successful.png)
+![logo](img/installer-setup-successful.png)
 After installation, we can verify Python is correctly installed by opening Command Prompt and typing `python --version`, which should display the installed version of Python.
 
-![logo](img/readme/verify-install.png)
+![logo](img/verify-install.png)
 
 <!-- TOC --><a name="22-git-bash"></a>
-## 2.2 Git Bash  <img height=20 src="img/readme/git-bash-logo.png" style="vertical-align: bottom;"/>
+## 2.2 Git Bash  <img height=20 src="img/git-bash-logo.png" style="vertical-align: bottom;"/>
 Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) or [PowerShell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell), I prefer using [Git Bash](https://git-scm.com/) because it is cross-platform and designed for [Git](https://en.wikipedia.org/wiki/Git), the near-ubiquitous version control system. Download the [latest stable build](https://git-scm.com/download/win) and install it with the default recommended settings.
 
 <!-- TOC --><a name="23-notepad"></a>
-## 2.3 Notepad++ <img height=22 src="img/readme/notepad-logo.png" style="vertical-align: bottom;"/>
+## 2.3 Notepad++ <img height=22 src="img/notepad-logo.png" style="vertical-align: bottom;"/>
 [Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default Notepad. If we were to code in Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash, our preferred terminal. Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
 
 <!-- TOC --><a name="24-vs-code"></a>
-## 2.4 VS Code <img height=20 src="img/readme/vs-code-logo.png" style="vertical-align: bottom;"/>
+## 2.4 VS Code <img height=20 src="img/vs-code-logo.png" style="vertical-align: bottom;"/>
 [VS Code](https://code.visualstudio.com/) is the natural code editor for the modern developer on a Windows machine. It is free, open-source, lightweight, cross-platform, fast, customizable, and equipped with all modern coding tools in the same interface. Download the [latest stable build](https://code.visualstudio.com/) and install with default settings.
 
 <!-- TOC --><a name="241-the-integrated-terminal"></a>
@@ -101,7 +101,7 @@ Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/adm
 VS Code has a **built-in terminal** that allows us to run command-line operations without needing to switch windows. Be sure to ***set the default integrated terminal to Git Bash***.
 
 <p align="left">
-  <img src="img/readme/set-bash-default.png" alt="logo" width="300"/>
+  <img src="img/set-bash-default.png" alt="logo" width="300"/>
 </p>
 
 <!-- TOC --><a name="242-hotkeys"></a>
@@ -181,13 +181,13 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
 8. **[RUFF](https://astral.sh/ruff) by Astral Software**
    - Automatically formats Python code in modern [Black](https://github.com/psf/black) style, eliminating the need for manual formatting. I would recommend adding these keyboard shortcuts for RUFF formatting:
 
-    ![logo](img/readme/ruff-keyboard-shortcuts.png)
+    ![logo](img/ruff-keyboard-shortcuts.png)
 
 9. **[isort](https://github.com/microsoft/vscode-isort) by Microsoft**
    - Consistently sorts imports, enhancing code readability. Combined with RUFF, we can auto-format everything in our Python scripts except comments and docstrings.
 
 10.  **[autoDocstring: VSCode Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) by Nils Werner**
-   - Dynamically creates Google-style docstrings based on a function's definition, saving significant time, giving us that last piece of formatting automation.
+   - Dynamically creates [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) based on a function's definition, saving significant time, giving us that last piece of formatting automation.
 
 <!-- TOC --><a name="245-automated-style-and-formatting"></a>
 ### 2.4.5 Automated Style and Formatting
@@ -203,7 +203,7 @@ Black defaults to 88 characters per line while PEP8 uses between 72 and 99 chara
 
 Note that these settings are *user* settings, so they must be set by accessing **Preferences: Open User Settings (JSON)** from the command palette. Remember, `Ctrl` + `Shift` + `P` opens the command palette.
 
-![logo](img/readme/command-palette-user-settings.png)
+![logo](img/command-palette-user-settings.png)
 
 After the *user* `settings.json` file is open, you can copy-and-paste my settings file, but note that ***it assumes all previously-mentioned extensions are installed***.
 
@@ -213,7 +213,7 @@ Virtual environments are *essential* for managing project dependencies. They all
 
 <!-- TOC --><a name="251-global-vs-local-workspaces"></a>
 ### 2.5.1 Global vs. Local Workspaces
-![logo](img/readme/virtual-environments.png)
+![logo](img/virtual-environments.png)
 In a **global workspace**, Python packages are installed system-wide. While convenient for system tools and widely used libraries, this approach can lead to version conflicts and unintended updates across projects.
 
 A **local workspace**, on the other hand, utilizes virtual environments to isolate project-specific dependencies. By creating a virtual environment for each project, we can install packages without affecting the system-wide Python installation. This isolation ensures that each project operates with its own set of dependencies, maintaining consistency and stability.
@@ -235,7 +235,7 @@ Once your workspace folder is open, do the following:
 4. After the environment is activated, you should see `(venv)` above the first line of the terminal.
 
 <p align="center">
-  <img src="img/readme/activate-venv.png" alt="logo" width="420"/>
+  <img src="img/activate-venv.png" alt="logo" width="420"/>
 </p>
 
 5. At this point, we have a blank slate to begin installing packages. If we are running someone else's project, they should have a `requirements.txt` file that lists out all modules necessary to get the software to work. To install these all in one go, run `pip install -r requirements.txt`.
@@ -301,7 +301,7 @@ contourpy==1.2.1
 Watch [this video by ByteByteGo](https://www.youtube.com/watch?v=e9lnsKot_SQ) for a great overview of Git.
 
 <p align="center">
-  <img src="img/readme/git-how-does-it-work.jpg" alt="logo" height="600"/>
+  <img src="img/git-how-does-it-work.jpg" alt="logo" height="600"/>
 </p>
 
 The ***four main areas*** Git interfaces with are:
@@ -329,7 +329,7 @@ The commands you'll use 99% of the time are:
 Rarely, you'll need additional commands when managing a complex code base. [This video by ByteByteGo](https://www.youtube.com/watch?v=0chZFIZLR_0) is a great introduction to them.
 
 <p align="center">
-  <img src="img/readme/git-merge-rebase.jfif" alt="logo" height="600"/>
+  <img src="img/git-merge-rebase.jfif" alt="logo" height="600"/>
 </p>
 
 - `git merge`
@@ -370,7 +370,7 @@ Here's how my standard development process looks on a daily basis. Again, `merge
 <!-- TOC --><a name="34-dealing-with-merge-conflicts"></a>
 ## 3.4 Dealing with Merge Conflicts
 
-![logo](img/readme/merge-conflict.png)
+![logo](img/merge-conflict.png)
 
 Before you're a professional, you'll almost never collaborate with other devs on a coding project in the same repo, so merge conflicts are rare. However, once multiple team members begin working on the same codebase simultaneously, it can get messy.
 
@@ -454,5 +454,5 @@ Great job if you've made it this far. This guide has a lot of condensed informat
 If you were able to use these concepts to clone or fork this repository to start developing solutions to [Project Euler](https://projecteuler.net/) or [LeetCode](https://leetcode.com/) problems, ***treat this repo as a gym*** 🏋️. It's a place to show up every day and keep your mind and software skills sharp. Don't just solve problems, but *practice your workflows*, and keep on top of your Github profile. Remember that consistency is key, and strength builds over time. You can't become a wizard in a day.
 
 <p align="center">
-  <img src="img/readme/python-wizard-hat.png" alt="logo" width="200"/>
+  <img src="img/python-wizard-hat.png" alt="logo" width="200"/>
 </p>
