@@ -57,9 +57,7 @@ class Solution:
             tail.next = ListNode(val=dig)  # Extend the linked list with another node.
 
             tail = tail.next  # Update the tail to be the newly-added node.
-            l1 = (
-                l1.next if l1 else None
-            )  # Update to the next place value digit in `l1`.
+            l1 = l1.next if l1 else None  # Update the next digit in `l1`.
             l2 = l2.next if l2 else None  # Do the same for `l2`.
 
         return dummy_head.next
