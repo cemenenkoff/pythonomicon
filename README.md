@@ -17,11 +17,11 @@
       + [2.4.5 Automated Style and Formatting](#245-automated-style-and-formatting)
          - [2.4.5.1 The Black Formatter](#2451-the-black-formatter)
       + [2.4.6 Customizing User Settings](#246-customizing-user-settings)
-   * [2.3 Virtual Environments](#23-virtual-environments)
-      + [2.3.1 Global vs. Local Workspaces](#231-global-vs-local-workspaces)
-      + [2.3.2 Creating a Virtual Environment](#232-creating-a-virtual-environment)
-      + [2.3.2 Managing Dependencies](#232-managing-dependencies)
-         - [2.3.3 `pip-tools` and `requirements.txt`](#233-pip-tools-and-requirementstxt)
+   * [2.5 Virtual Environments](#23-virtual-environments)
+      + [2.5.1 Global vs. Local Workspaces](#231-global-vs-local-workspaces)
+      + [2.5.2 Creating a Virtual Environment](#232-creating-a-virtual-environment)
+      + [2.5.2 Managing Dependencies](#232-managing-dependencies)
+         - [2.5.3 `pip-tools` and `requirements.txt`](#233-pip-tools-and-requirementstxt)
 - [3. Git and Version Control](#3-git-and-version-control)
    * [3.1 Basic Git Overview](#31-basic-git-overview)
    * [3.2 General Strategy to Git Development](#32-general-strategy-to-git-development)
@@ -49,14 +49,14 @@ When I graduated in math and physics, I had only worked with [Python](https://ww
 
 <!-- TOC --><a name="12-purpose"></a>
 ## 1.2 Purpose
-After six years as a professional developer, I've added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). If you're strong in math but need to improve your computer skills, this repository is for you.
+After six years as a professional developer, I've returned to this practice repo and added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). If you're strong in math but need to improve your computer skills, this repository is for you.
 
 <!-- TOC --><a name="2-environment-setup"></a>
-# 2. Environment Setup <img height=25 src="img/readme/windows-logo.png" style="vertical-align: bottom;"/>
+# 2. Environment Setup <img height=20 src="img/readme/windows-logo.png" style="vertical-align: bottom;"/>
 If you've used [R](https://www.r-project.org/) or [Python](https://www.python.org/) in research, you may have used [Anaconda](https://www.anaconda.com/) to simplify setup and package installation to jump right into coding. Staying in this tutorial zone limits our growth and ability to push to production. Learning to set up Python and interact with your computer's filesystem is crucial foundational knowledge, even if it's frustrating at first.
 
 <!-- TOC --><a name="21-python"></a>
-## 2.1 Python <img height=25 src="img/readme/python-logo.webp" style="vertical-align: bottom;"/>
+## 2.1 Python <img height=20 src="img/readme/python-logo.webp" style="vertical-align: bottom;"/>
 First, visit the [downloads section](https://www.python.org/downloads/) of the official Python website and download the latest version of the Python installer for Windows.
 
 ![logo](img/readme/download-python.png)
@@ -84,20 +84,20 @@ After installation, we can verify Python is correctly installed by opening Comma
 ![logo](img/readme/verify-install.png)
 
 <!-- TOC --><a name="22-git-bash"></a>
-## 2.2 Git Bash  <img height=25 src="img/readme/git-bash-logo.png" style="vertical-align: bottom;"/>
-Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) or [PowerShell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell), I prefer using [Git Bash](https://git-scm.com/) because it is cross-platform and designed for Git, the near-ubiquitous version control system. Download the [latest stable build](https://git-scm.com/download/win) and install it with the default recommended settings.
+## 2.2 Git Bash  <img height=20 src="img/readme/git-bash-logo.png" style="vertical-align: bottom;"/>
+Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) or [PowerShell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell), I prefer using [Git Bash](https://git-scm.com/) because it is cross-platform and designed for [Git](https://en.wikipedia.org/wiki/Git), the near-ubiquitous version control system. Download the [latest stable build](https://git-scm.com/download/win) and install it with the default recommended settings.
 
 <!-- TOC --><a name="23-notepad"></a>
-## 2.3 Notepad++ <img height=30 src="img/readme/notepad-logo.png" style="vertical-align: bottom;"/>
+## 2.3 Notepad++ <img height=22 src="img/readme/notepad-logo.png" style="vertical-align: bottom;"/>
 [Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default Notepad. If we were to code in Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash, our preferred terminal. Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
 
 <!-- TOC --><a name="24-vs-code"></a>
-## 2.4 VS Code <img height=25 src="img/readme/vs-code-logo.png" style="vertical-align: bottom;"/>
-[VS Code](https://code.visualstudio.com/) is the natural code editor for the modern developer on a Windows machine. Download the [latest stable build](https://code.visualstudio.com/). Old school coding veterans often prefer text editors like [VIM](https://www.vim.org/) or [Emacs](https://www.gnu.org/software/emacs/) that offer more customization, efficiency, and speed at the expense of a modern GUI and a gentler learning curve.
+## 2.4 VS Code <img height=20 src="img/readme/vs-code-logo.png" style="vertical-align: bottom;"/>
+[VS Code](https://code.visualstudio.com/) is the natural code editor for the modern developer on a Windows machine. It is free, open-source, lightweight, cross-platform, fast, customizable, and equipped with all modern coding tools in the same interface. Download the [latest stable build](https://code.visualstudio.com/) and install with default settings.
 
 <!-- TOC --><a name="241-the-integrated-terminal"></a>
 ### 2.4.1 The Integrated Terminal
-VS Code has a **built-in terminal** that allows us to run command-line operations without needing to switch windows. Be sure to ***set the default integrated terminal to*** `bash`.
+VS Code has a **built-in terminal** that allows us to run command-line operations without needing to switch windows. Be sure to ***set the default integrated terminal to Git Bash***.
 
 <p align="left">
   <img src="img/readme/set-bash-default.png" alt="logo" width="300"/>
@@ -112,16 +112,18 @@ VS Code is fully accessible from the keyboard. The most important key combinatio
 | Shortcut                 | Action                               |
 |--------------------------|--------------------------------------|
 | `Ctrl` + `Shift` + `P`   | Open Command Palette                 |
-| `Ctrl` + `A`             | Select All                           |
-| `Ctrl` + `C`             | Copy                                 |
-| `Ctrl` + `V`             | Paste                                |
+| `Ctrl` + `/`             | Toggle Line Comment                  |
+| `Shift` + `Alt` + `↑`    | Copy Line Up (or Down `↓`)           |
+| `Alt` + `←`              | Go Back (or Forward `→`)             |
+| `Alt` + `→`              | Go Forward                           |
 | `Ctrl` + `D`             | Add Selection to Next Find Match     |
-| `Ctrl` + `O`             | File: Open File...                   |
+| `Ctrl` + `X`             | Cut (the Entire Line)                |
 | `Ctrl` + `K` `Ctrl` + `O`| File: Open Folder...                 |
 | `Shift` + `Alt` + `R`    | File: Reveal in File Explorer        |
 | `Ctrl` + `F`             | Find                                 |
 | `Ctrl` + `H`             | Replace                              |
 | `F5`                     | Debug: Start Debugging               |
+| `F12`                    | Go to Definition                     |
 
 <!-- TOC --><a name="243-the-debugger"></a>
 ### 2.4.3 The Debugger
@@ -129,7 +131,7 @@ In a professional context, the [debugger](https://code.visualstudio.com/docs/edi
 
 Like the built-in terminal, VS Code has a **built-in debug console**. When running a script with the debugger, you can explore variable states and the call stack when paused at a breakpoint.
 
-By default, VS Code creates a *new* terminal for each debug run. This can consume unnecessary RAM, especially for new programmers who don't need previous debug outputs. To avoid this, configure VS Code to send output to the integrated debug console, clearing history after each run. This setting is managed in something called the `launch.json` file that appears in the dynamically-generated `.vscode` folder when prompted. [Here is the standard one I use](.vscode/launch.json).
+By default, VS Code creates a *new* terminal for each debug run. This can consume unnecessary RAM, especially for new programmers who don't need previous debug outputs. To avoid this, configure VS Code to send output to the integrated debug console, clearing history after each run. This setting is managed in something called the `launch.json` file that appears in the dynamically-generated `.vscode` folder when debugging is prompted (with `F5`). [Here is the standard one I use](.vscode/launch.json).
 
 ```python
 {
@@ -197,24 +199,25 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
 Black defaults to 88 characters per line while PEP8 uses between 72 and 99 characters. Keeping all of this in mind, I set up my user settings to highlight certain line lengths (i.e. rulers), wrap at 88 characters, set my file explorer to the right side, have my files save when changing cursor focus, use One Dark Pro, and other preferences. [Here is a link to the user `settings.json` file I use while developing](config/settings.json).
 
 Note that these settings are *user* settings, so they must be set by accessing **Preferences: Open User Settings (JSON)** from the command palette. Remember, `Ctrl` + `Shift` + `P` opens the command palette.
+
 ![logo](img/readme/command-palette-user-settings.png)
 
 After the *user* `settings.json` file is open, you can copy-and-paste my settings file, but note that ***it assumes all previously-mentioned extensions are installed***.
 
-<!-- TOC --><a name="23-virtual-environments"></a>
-## 2.3 Virtual Environments
+<!-- TOC --><a name="25-virtual-environments"></a>
+## 2.5 Virtual Environments
 Virtual environments are *essential* for managing project dependencies. They allow us to avoid the hassle of reinstalling Python multiple times when different projects require different versions (e.g., Python 3.8 vs. 3.12).
 
-<!-- TOC --><a name="231-global-vs-local-workspaces"></a>
-### 2.3.1 Global vs. Local Workspaces
+<!-- TOC --><a name="251-global-vs-local-workspaces"></a>
+### 2.5.1 Global vs. Local Workspaces
 ![logo](img/readme/virtual-environments.png)
 In a **global workspace**, Python packages are installed system-wide. While convenient for system tools and widely used libraries, this approach can lead to version conflicts and unintended updates across projects.
 
 A **local workspace**, on the other hand, utilizes virtual environments to isolate project-specific dependencies. By creating a virtual environment for each project, we can install packages without affecting the system-wide Python installation. This isolation ensures that each project operates with its own set of dependencies, maintaining consistency and stability.
 
 Local workspaces allow us to experiment with different package versions too, helping facilitate updating project **dependencies** (which can be a very frustrating process).
-<!-- TOC --><a name="232-creating-a-virtual-environment"></a>
-### 2.3.2 Creating a Virtual Environment
+<!-- TOC --><a name="252-creating-a-virtual-environment"></a>
+### 2.5.2 Creating a Virtual Environment
 Once your workspace folder is open, do the following:
 1. Run `pip install virtualenv`:
    1. What is `pip install`?
@@ -233,12 +236,12 @@ Once your workspace folder is open, do the following:
 
 5. At this point, we have a blank slate to begin installing packages. If we are running someone else's project, they should have a `requirements.txt` file that lists out all modules necessary to get the software to work. To install these all in one go, run `pip install -r requirements.txt`.
 
-<!-- TOC --><a name="232-managing-dependencies"></a>
-### 2.3.2 Managing Dependencies
+<!-- TOC --><a name="252-managing-dependencies"></a>
+### 2.5.2 Managing Dependencies
 What if we want to make our own `requirements.txt` file? As our projects grow more complex, we'll need to import various Python libraries, each potentially requiring specific versions of *their* own dependencies. Without a proper system to manage these interconnected dependencies, things can quickly become a disorganized mess. A standard way to export currently-installed modules is with `pip freeze > requirements.txt`, but there is a better way.
 
-<!-- TOC --><a name="233-pip-tools-and-requirementstxt"></a>
-#### 2.3.3 `pip-tools` and `requirements.txt`
+<!-- TOC --><a name="253-pip-tools-and-requirementstxt"></a>
+### 2.5.3 `pip-tools` and `requirements.txt`
 By default, running `pip freeze > requirements.txt` exports a list of our project dependencies in a file named `requirements.txt`.
 
 ```
