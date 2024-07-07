@@ -50,7 +50,9 @@ When I graduated in math and physics, I had only worked with [Python](https://ww
 
 <!-- TOC --><a name="12-purpose"></a>
 ## 1.2 Purpose
-After six years as a professional developer, I've returned to this practice repo and added the tools, tips, and tutorials I wish I'd had when I started. This repository walks through the basics of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). If you're strong in math but need to improve your computer skills, this repository is for you.
+After six years as a professional developer, I've revisited this practice repository to enhance it with tools, tips, and tutorials that I wish I had when starting out. This repository covers the essentials of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). It's designed to help you improve your computer skills, especially if you have a strong math background.
+
+Please note, this repository does *not* focus on creating elaborate data science projects or complex machine learning models. Instead, it emphasizes the engineering principles and efficient data structures essential for developing robust, high-performance software.
 
 <!-- TOC --><a name="2-environment-setup"></a>
 # 2. Environment Setup <img height=20 src="img/windows-logo.png" style="vertical-align: bottom;"/>
