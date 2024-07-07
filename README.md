@@ -410,7 +410,7 @@ Most Python projects have similarly-named directories to organize files in a way
 | `dist`      | Stores distribution packages for the project (i.e. wheels) |
 | `build`     | Build-related files and temporary build artifacts     |
 
-Even if these names or concepts aren't familiar yet, using these folders when creating a workspace structure ***helps other devs use your project***.
+Even if these names or concepts aren't familiar yet, using these folders when creating a workspace structure ***helps other devs use your projects***.
 
 <!-- TOC --><a name="42-code-vs-non-code-files"></a>
 ## 4.2 Code vs. Non-Code Files
