@@ -243,7 +243,7 @@ Once your workspace folder is open, do the following:
 
 <!-- TOC --><a name="253-managing-dependencies"></a>
 ### 2.5.3 Managing Dependencies
-What if you want to make your own `requirements.txt` file? As your projects grow more complex, you'll need to import various Python libraries, each potentially requiring specific versions of *their* own dependencies. Without a proper system to manage these interconnected dependencies, things can quickly become a disorganized mess. A standard way to export currently-installed modules is with `pip freeze > requirements.txt`, but there is a better way.
+What if you want to make your own `requirements.txt` file? As your projects grow more complex, you'll need to import various Python libraries, each potentially requiring specific versions of *their* own dependencies. Without a proper system to manage these interconnected dependencies, things can quickly become a mess. The standard way to export currently-installed modules is with `pip freeze > requirements.txt`, but there is a better way.
 
 <!-- TOC --><a name="2531-managing-interlaced-dependencies"></a>
 #### 2.5.3.1 Managing Interlaced Dependencies
@@ -256,7 +256,7 @@ colorama==0.4.6
 contourpy==1.2.1
 ```
 
-However, this list doesn't indicate which modules depend on which others.
+However, ***this list doesn't indicate which modules depend on which others***.
 
 This is where `pip-tools` becomes useful. After installing the package with `pip install pip-tools`, the flow to export dependencies becomes:
 1. `pip freeze > requirements.in`
@@ -313,58 +313,58 @@ The ***four main areas*** Git interfaces with are:
 
 The commands you'll use 99% of the time are:
 - `git clone`
-  - Creates a copy of an existing repository from a remote server to your local machine.
+  - Create a copy of an existing repository from a remote server to your local machine.
 - `git branch`
-  - Lists, creates, or deletes branches within a repository.
+  - List, create, or delete branches within a repository.
 - `git checkout`
-  - Switches between branches or restores files in the working directory.
+  - Switch between branches or restore files in the working directory.
 - `git add`
-  - Stages changes (new, modified, or deleted files) to be included in the next commit.
+  - Stage changes (new, modified, or deleted files) to be included in the next commit.
 - `git commit`
-  - Records the staged changes to the repository with a descriptive message.
+  - Record any staged changes to the repository with a descriptive message.
 - `git push`
-  - Uploads local commits to a remote repository.
+  - Upload local commits to a remote repository.
 - `git pull`
-  - Fetches and integrates changes from a remote repository into the current branch.
+  - Fetche and integrate changes from a remote repository into the current branch.
 
-Rarely, you'll need additional commands when managing a complex code base. [This video by ByteByteGo](https://www.youtube.com/watch?v=0chZFIZLR_0) is a great introduction to them.
+Less often, you'll need additional commands when managing a complex code base. [This video by ByteByteGo](https://www.youtube.com/watch?v=0chZFIZLR_0) is a great introduction to them.
 
 <p align="center">
   <img src="img/git-merge-rebase.jfif" alt="logo" height="600"/>
 </p>
 
 - `git merge`
-  - Combines changes from one branch into another, creating a merge commit that integrates the histories of both branches.
+  - Combine changes from one branch into another, creating a merge commit that integrates the histories of both branches.
 - `git rebase`
-  - Moves or re-applies a series of commits to a new base commit, creating a linear project history.
+  - Move or re-apply a series of commits to a new base commit, creating a linear project history.
 - `squash commit`
-  - Combines multiple commits into a single commit, simplifying the commit history and making it cleaner. This can be done during a rebase or merge.
+  - Combine multiple commits into a single commit, simplifying the commit history. This can be done during a rebase or merge.
 
 <!-- TOC --><a name="32-general-strategy-to-git-development"></a>
 ## 3.2 General Strategy to Git Development
 After cloning a project and aunthenticating, you want to have a cohesive general approach to developing new features in your repo.
-1. 💾 ***Commit frequently.*** You want to maintain a clean commit history by committing frequently, logically separating changing with meaningful commit messages. This makes reading the commit history much easier in the future.
+1. 💾 ***Commit frequently.*** You want to maintain a clean commit history by committing frequently, logically chunking updates with meaningful commit messages. This makes reading the commit history much easier.
 2. ❌ ***Avoid partial pushes.*** Only push to remote when your work is ready, and avoid partial pushes. This is an essential practice to prevent bugs in production.
-3. 🌱 ***Develop on new branches.*** To make sure things don't get mixed up, its best to develop new features or bugfixes on new branches. Working solely on `master` is only really appropriate when you're the sole author of a project, and even still, creating new branches for particularly large feature changes saves a lot of headache if anything ever needs to be rolled back.
+3. 🌱 ***Develop on new branches.*** To make sure things don't get mixed up, its best to develop new features or bugfixes on new branches. Working solely on `master` is only really appropriate when you're the sole author of a project, and even still, creating new branches for particularly large feature changes saves a lot of headache if anything ever needs to be rolled back, even if you are working alone.
 
 <!-- TOC --><a name="33-usual-git-workflow"></a>
 ## 3.3 Usual Git Workflow
 Here's how my standard development process looks on a daily basis. Again, `merge` or `rebase` aren't used often, so they aren't a part of this flow.
-1. Clone the repository from its remote location to your local machine.
+1. 📥 Clone the repository from its remote location to your local machine.
    1. `git clone <url>`
       1. This can be done with SSH or HTTPS. SSH saves time in the long run and could be considered slightly more secure, but both methods are just fine.
-2. Make a new branch and switch to it.
+2. 🌱 Make a new branch and switch to it.
    1. `git branch <name>` to create the branch.
    2. `git checkout <name>` to switch to it.
    3. *Or*, use `git checkout -b <name>` to do it all at once (this is the easiest way).
-3. Make changes locally by creating new files or editing existing ones.
-4. Add the changes to the Staging Area.
+3. 📝 Make changes locally by creating new files or editing existing ones.
+4. 📨 Add the changes to the Staging Area.
    1. `git add .`
       1. Note that `.` means *all* files, but you could specify individual ones with `git add "myfile.txt"` if you wanted to.
-5. Commit the changes with a *meaningful* message (easier said than done):
+5. 📬 Commit the changes with a *meaningful* message (easier said than done):
    1. `git commit -m "asdf"`
 6. Repeat steps 3-5 for subsequent changes, paced at logical intervals.
-7. Push all commits to the remote repository.
+7. 📤 Push all commits to the remote repository.
    1. `git push`
 8. To learn even more, [MIT provides an in-depth guide to learning the Git workflow](https://ocw.mit.edu/ans7870/6/6.005/s16/getting-started/#git).
 
@@ -389,7 +389,7 @@ Adopting virtual environments, Git, and a well-structured folder tree ***streaml
 
 <!-- TOC --><a name="41-organizing-the-file-explorer"></a>
 ## 4.1 Organizing the File Explorer
-Most Python projects have similarly-named directories to organize files in a way that is logical and familiar to other devs. The following table lists some of the most common standard directory names.
+Most Python projects have similarly-named directories to organize files in a way that is logical and familiar to other devs. The following table lists some of the most common directory names.
 
 | Directory   | Description                                           |
 |-------------|-------------------------------------------------------|
@@ -411,7 +411,7 @@ Most Python projects have similarly-named directories to organize files in a way
 | `dist`      | Stores distribution packages for the project (i.e. wheels) |
 | `build`     | Build-related files and temporary build artifacts     |
 
-Even if these names or concepts aren't familiar yet, using these folders when creating a workspace structure ***helps other devs use your projects***.
+Even if these names or concepts aren't familiar yet, using these folders when creating a workspace structure will ***help other devs understand your project***.
 
 <!-- TOC --><a name="42-naming-conventions"></a>
 ## 4.2 Naming Conventions
@@ -431,7 +431,7 @@ According to me, ***every repository worth its salt needs to have the following 
 - `README.md`
   - A Markdown file that serves as the entry point and documentation for a project. It typically includes a description of the project, installation instructions, usage examples, and other relevant information.
 - `requirements.in`
-  - A text file used with the `pip-compile` tool. It lists the direct dependencies of a project without specifying their versions explicitly. It's used to generate the `requirements.txt` file.
+  - A text file used with the `pip-compile` tool. It lists the direct dependencies of a project without specifying how they are interconnected. It's used to generate the `requirements.txt` file.
 - `requirements.txt`
   - A text file that lists the Python packages (including their specific versions) required for a project. It allows for easy installation of dependencies using `pip install -r requirements.txt`.
 
@@ -448,11 +448,11 @@ As you want to automate your workflow further, you can introduce some of these i
 
 <!-- TOC --><a name="5-conclusion"></a>
 # 5. Conclusion
-Great job if you've made it this far. This guide has a lot of condensed information, but it's the core of developing like a professional Python software engineer instead of a university academic. Practicing these principles and workflows alongside coding concepts and data projects is the difference between pushing a project to production or having it sit in a closet as a prototype. [Docker containers](https://www.docker.com/resources/what-container/) are relevant to this idea, but are outside of the scope of this practice repo.
+Great job if you've made it this far. This guide has a lot of condensed information, but it will help you code like a professional Python software engineer instead of a university academic. Practicing these principles and workflows alongside coding concepts and data projects is the difference between pushing a project to production or having it sit in a closet as a prototype. [Docker containers](https://www.docker.com/resources/what-container/) are also relevant to this idea, but are outside of the scope of this repo.
 
 <!-- TOC --><a name="51-where-to-go-from-here"></a>
 ## 5.1 Where to Go from Here?
-If you were able to use these concepts to clone or fork this repository to start developing solutions to [Project Euler](https://projecteuler.net/) or [LeetCode](https://leetcode.com/) problems, ***treat this repo as a gym*** 🏋️. It's a place to show up every day and keep your mind and software skills sharp. Don't just solve problems, but *practice your workflows*, and keep on top of your Github profile. Remember that consistency is key, and strength builds over time. You can't become a wizard in a day.
+If you were able to use these concepts to clone or fork this repository, start developing solutions to [Project Euler](https://projecteuler.net/) or [LeetCode](https://leetcode.com/) problems, and ***treat this repo as a gym*** 🏋️. It's a place to show up every day and keep your mind and software skills sharp. Don't just solve problems, but *practice your workflows*, and keep on top of your Github profile. Remember that consistency is key, and strength builds over time. You can't become a wizard in a day.
 
 <p align="center">
   <img src="img/python-wizard-hat.png" alt="logo" width="200"/>
