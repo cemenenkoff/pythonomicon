@@ -29,7 +29,7 @@
    * [3.3 Usual Git Workflow](#33-usual-git-workflow)
    * [3.4 Dealing with Merge Conflicts](#34-dealing-with-merge-conflicts)
       + [***Before starting work, always*** `git pull`.](#before-starting-work-always-git-pull)
-- [4 Organizing Your Workspace](#4-organizing-your-workspace)
+- [4. Organizing Your Workspace](#4-organizing-your-workspace)
    * [4.1 Organizing the File Explorer](#41-organizing-the-file-explorer)
    * [4.2 Naming Conventions](#42-naming-conventions)
    * [4.3 Supplemental Files](#43-supplemental-files)
@@ -64,7 +64,7 @@ First, visit the [downloads section](https://www.python.org/downloads/) of the o
 
 ![logo](img/download-python.png)
 
-Unless you have a specific reason to use something older, use the latest version (e.g. TensorFlow is [incompatible with Python > 3.11](https://www.tensorflow.org/install) as of writing this). Does this mean if you want to use TensorFlow, you have to uninstall the latest version of Python? No. You can use different Python versions for different projects, but we'll tackle that a little later.
+Unless you have a specific reason to use something older, use the latest version (e.g. TensorFlow is [incompatible with Python > 3.11](https://www.tensorflow.org/install) as of writing this). Does this mean if you want to use TensorFlow, you have to uninstall the latest version of Python? No. You can use different Python versions for different projects, but that will be covered a little later.
 
 Go to wherever you downloaded the installer, then run it.
 
@@ -90,7 +90,7 @@ Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/adm
 
 <!-- TOC --><a name="23-notepad"></a>
 ## 2.3 Notepad++ <img height=22 src="img/notepad-logo.png" style="vertical-align: bottom;"/>
-[Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default [Notepad](https://en.wikipedia.org/wiki/Windows_Notepad). If you were to code in Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash (my preferred terminal). Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
+[Notepad++](https://notepad-plus-plus.org/) is a widespread, open source upgrade to Microsoft's default [Notepad](https://en.wikipedia.org/wiki/Windows_Notepad). If you were to code in Python in a bare bones text editor, Notepad++ would be a logical choice. It has a clean GUI and a myriad of plug-ins and customizability, and it directly interfaces with Git Bash. Download the [latest stable build](https://notepad-plus-plus.org/downloads/) and install it with the default recommended settings.
 
 <!-- TOC --><a name="24-vs-code"></a>
 ## 2.4 VS Code <img height=20 src="img/vs-code-logo.png" style="vertical-align: bottom;"/>
@@ -98,7 +98,7 @@ Instead of [Command Prompt](https://learn.microsoft.com/en-us/windows-server/adm
 
 <!-- TOC --><a name="241-the-integrated-terminal"></a>
 ### 2.4.1 The Integrated Terminal
-VS Code has a **built-in terminal** that allows you to run command-line operations without needing to switch windows. Be sure to ***set the default integrated terminal to Git Bash***.
+VS Code has a **built-in terminal** that allows you to run command-line operations without needing to switch windows. ***Be sure to set the default integrated terminal to Git Bash***.
 
 <p align="left">
   <img src="img/set-bash-default.png" alt="logo" width="300"/>
@@ -106,7 +106,7 @@ VS Code has a **built-in terminal** that allows you to run command-line operatio
 
 <!-- TOC --><a name="242-hotkeys"></a>
 ### 2.4.2 Hotkeys
-Using hotkeys is the key to making coding feel comfortable and natural. It's essential to **automate your workflow**, and the less you have to move the mouse, [the better your wrists will feel](https://x-team.com/blog/avoid-carpal-tunnel-syndrome).
+Hotkeys are the way to making coding feel comfortable and natural. It's essential to **automate your workflow**, and the less you have to move the mouse, [the better your wrists will feel](https://x-team.com/blog/avoid-carpal-tunnel-syndrome).
 
 VS Code is fully accessible from the keyboard. The most important key combination to know is `Ctrl` + `Shift` + `P`, which brings up the Command Palette. From there, you have access to all functionality within VS Code, including keyboard shortcuts for the most common operations. Here are some of the most useful ones for beginners.
 
@@ -176,14 +176,14 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
    - With this, you can view PDF files directly in VS Code, reducing context switching.
 
 7. **[Python Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent) by Kevin Rose**
-   - These extension automatically indents Python code to the correct level as you write new lines, reducing keystrokes and improving readability without distraction.
+   - This extension automatically indents Python code to the correct level as you write new lines, reducing keystrokes and improving readability without distraction.
 
 8. **[RUFF](https://astral.sh/ruff) by Astral Software**
    - Automatically format your Python code in modern [Black](https://github.com/psf/black) style, practically eliminating the need for manual formatting. I also recommend adding these keyboard shortcuts for RUFF formatting:
     ![logo](img/ruff-keyboard-shortcuts.png)
 
 9. **[isort](https://github.com/microsoft/vscode-isort) by Microsoft**
-   - This extension consistently sorts imports, enhancing code readability. Combined with RUFF, you can auto-format nearly everything in your Python scripts (except some comments and docstrings).
+   - This extension consistently sorts imports, enhancing code readability. Combined with RUFF, you can auto-format nearly everything in your Python scripts except for some comments and docstrings.
 
 10.  **[autoDocstring: VSCode Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) by Nils Werner**
    - Dynamically create [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) based on a function's definition. This gives you that last piece of formatting automation.
@@ -262,7 +262,7 @@ This is where `pip-tools` becomes useful. After installing the package with `pip
 1. `pip freeze > requirements.in`
 2. `pip-compile`
 
-The resulting `requirements.txt` file includes not only the required modules and their versions, but also all their interlaced dependencies. This detailed information is especially valuable when sharing code with other developers, that may want to update or modify dependencies in your project.
+The resulting `requirements.txt` file includes not only the required modules and their versions, but also all of their interlaced dependencies. This detailed information is especially valuable when sharing code with other developers, that may want to update or modify dependencies in your project.
 
 ```
 # This file is autogenerated by pip-compile with Python 3.12
@@ -325,7 +325,7 @@ The commands you'll use 99% of the time are:
 - `git push`
   - Upload local commits to a remote repository.
 - `git pull`
-  - Fetche and integrate changes from a remote repository into the current branch.
+  - Fetch and integrate changes from a remote repository into the current branch.
 
 Less often, you'll need additional commands when managing a complex code base. [This video by ByteByteGo](https://www.youtube.com/watch?v=0chZFIZLR_0) is a great introduction to them.
 
@@ -384,8 +384,8 @@ To avoid all of this headache:
 This way, you are always working from the latest version of your code base, and you're be less likely to have to perform a merge later.
 
 <!-- TOC --><a name="4-organizing-your-workspace"></a>
-# 4 Organizing Your Workspace
-Adopting virtual environments, Git, and a well-structured folder tree ***streamlines your dev workflow and reduces errors***. These practices are *foundational* for maintaining a clean, manageable, and scalable codebase, so its essential to practice them, even on personal projects.
+# 4. Organizing Your Workspace
+Adopting virtual environments, Git, and a well-structured folder tree ***streamlines your workflow and reduces errors***. These practices are *foundational* for maintaining a clean, manageable, and scalable codebase, so its essential to practice them, even on personal projects.
 
 <!-- TOC --><a name="41-organizing-the-file-explorer"></a>
 ## 4.1 Organizing the File Explorer
@@ -427,7 +427,7 @@ A file or directory that uses `kebab-case` can't be directly imported by Python,
 ## 4.3 Supplemental Files
 According to me, ***every repository worth its salt needs to have the following files:***
 - `.gitignore`
-  - Specifies files and directories that Git should ignore. It ensures that sensitive or unnecessary files (e.g. log files or compiled binaries) are not tracked by version control.
+  - A configuration file specifies files and directories that Git should ignore. It ensures that sensitive or unnecessary files (e.g. log files or compiled binaries) are not tracked by version control.
 - `README.md`
   - A Markdown file that serves as the entry point and documentation for a project. It typically includes a description of the project, installation instructions, usage examples, and other relevant information.
 - `requirements.in`
