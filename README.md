@@ -4,8 +4,8 @@
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [1. Introduction (to the Job Market)](#1-introduction-to-the-job-market)
-   * [1.1 Background](#11-background)
-   * [1.2 Purpose](#12-purpose)
+   * [1.1 Purpose](#11-purpose)
+   * [1.2 Background](#12-background)
 - [2. Environment Setup <img height=20 src="img/windows-logo.png" style="vertical-align: bottom;"/>](#2-environment-setup)
    * [2.1 Python <img height=20 src="img/python-logo.webp" style="vertical-align: bottom;"/>](#21-python)
    * [2.2 Git Bash  <img height=20 src="img/git-bash-logo.png" style="vertical-align: bottom;"/>](#22-git-bash)
@@ -44,15 +44,15 @@
 
 ***This repository is for STEM graduates who want to become software professionals.*** It's designed for those who excel in science, statistics, or data analysis but have knowledge gaps in software engineering. If you're great academically but less great with coding, this repo is perfect for you no matter what data-based job you're aiming for.
 
-<!-- TOC --><a name="11-background"></a>
-## 1.1 Background
-After graduating with degrees in math and physics, I had only used [Python](https://www.python.org/) in a research setting. My clunky code was holding me back. I needed to adopt a more computational approach to break new ground (e.g. a one-month runtime is unreasonable). I realized that deepening my understanding of software principles was key to solving more complex numerical problems. I then discovered [Project Euler](projecteuler.net), a website focused on solving progressively challenging math problems with code. It was the perfect place to start. Later, I found that [LeetCode](https://leetcode.com/) was also crucial for improving, as it reinforces coding with efficient, industry-standard data structures.
-
-<!-- TOC --><a name="12-purpose"></a>
-## 1.2 Purpose
-After six years as a professional developer, I've returned to this practice repo and enhanced it with tools, tips, and tutorials I wish I'd have been given starting out. This repository covers the essentials of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). It's designed to help you improve your computer skills, especially if you have a strong math background.
+<!-- TOC --><a name="11-purpose"></a>
+## 1.1 Purpose
+After six years as a professional developer, I've returned to this practice repo and enhanced it with the tools, tips, and tutorials I wish I'd have been given when starting out. This repository covers the essentials of ***interfacing with the computer as a software developer*** while practicing with [LeetCode](https://leetcode.com/) and [Project Euler](projecteuler.net). It's designed to help you improve your computer skills, especially if you have a strong math background.
 
 Please note, this repository does *not* focus on creating elaborate data science projects or complex machine learning models. Instead, it emphasizes the engineering principles and efficient data structures essential for developing robust, high-performance software.
+
+<!-- TOC --><a name="12-background"></a>
+## 1.2 Background
+After graduating with degrees in math and physics, I had only used [Python](https://www.python.org/) in a research setting. My clunky code was holding me back. I needed to adopt a more computational approach to break new ground (e.g. a one-month runtime is unreasonable). I realized that deepening my understanding of software principles was key to solving more complex numerical problems. I then discovered [Project Euler](projecteuler.net), a website focused on solving progressively challenging math problems with code. It was the perfect place to start. Later, I found that [LeetCode](https://leetcode.com/) was also crucial for improving, as it reinforces coding with efficient, industry-standard data structures.
 
 <!-- TOC --><a name="2-environment-setup"></a>
 # 2. Environment Setup <img height=20 src="img/windows-logo.png" style="vertical-align: bottom;"/>
