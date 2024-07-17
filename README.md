@@ -178,25 +178,25 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
 7. **[Python Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent) by Kevin Rose**
    - This extension automatically indents Python code to the correct level as you write new lines, reducing keystrokes and improving readability without distraction.
 
-8. **[RUFF](https://astral.sh/ruff) by Astral Software**
-   - Automatically format your Python code in modern [Black](https://github.com/psf/black) style, practically eliminating the need for manual formatting. I also recommend adding these keyboard shortcuts for RUFF formatting:
+8. **[Ruff](https://astral.sh/ruff) by Astral Software**
+   - Automatically format your Python code in modern [Black](https://github.com/psf/black) style, practically eliminating the need for manual formatting. I also recommend adding these keyboard shortcuts for Ruff formatting:
     ![logo](img/ruff-keyboard-shortcuts.png)
 
 9. **[isort](https://github.com/microsoft/vscode-isort) by Microsoft**
-   - This extension consistently sorts imports, enhancing code readability. Combined with RUFF, you can auto-format nearly everything in your Python scripts except for some comments and docstrings.
+   - This extension consistently sorts imports, enhancing code readability. Combined with Ruff, you can auto-format nearly everything in your Python scripts except for some comments and docstrings.
 
 10.  **[autoDocstring: VSCode Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) by Nils Werner**
    - Dynamically create [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) based on a function's definition. This gives you that last piece of formatting automation.
 
 <!-- TOC --><a name="245-automated-style-and-formatting"></a>
 ### 2.4.5 Automated Style and Formatting
-***Spend as little time on formatting as possible.*** Using RUFF, isort, and autoDocstring eliminates 99% of any formatting you'll need to do. Solving the problem at hand should always be your main focus.
+***Spend as little time on formatting as possible.*** Using Ruff, isort, and autoDocstring eliminates 99% of any formatting you'll need to do. Solving the problem at hand should always be your main focus.
 
 <!-- TOC --><a name="2451-the-black-formatter"></a>
 #### 2.4.5.1 The Black Formatter
 > *"[Black](https://github.com/psf/black) is an uncompromising Python code formatter that saves time and mental energy by automating code formatting, ensuring consistency, and reducing diffs for faster code reviews."*
 
-The Black formatting standard is a modern improvement to the previous one, [PEP 8](https://peps.python.org/pep-0008/), and it's *the best* modern way to format a Python code base. The RUFF extension utilizes Black when it performs automated formatting.
+The Black formatting standard is a modern improvement to the previous one, [PEP 8](https://peps.python.org/pep-0008/), and it's *the best* modern way to format a Python code base. The Ruff extension utilizes Black when it performs automated formatting.
 
 <!-- TOC --><a name="246-customizing-user-settings"></a>
 ### 2.4.6 Customizing User Settings
