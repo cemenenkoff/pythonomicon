@@ -70,17 +70,21 @@ Unless you have a specific reason to use something older, use the latest version
 Go to wherever you downloaded the installer, then run it.
 
 ![logo](img/installer-add-to-path-customize.png)
+
 The **☑ Add python.exe to PATH** option during installation configures your Windows system to recognize Python commands from *any* command prompt.
 
 ![logo](img/installer-optional-features.png)
+
 The only people who need to install Python globally work in IT. Even if you're on a company laptop, just install Python for yourself.
 
 ![logo](img/installer-advanced-options.png)
+
 The **☑ Add Python to Environment Variables** option is the same as **☑ Add python.exe to PATH**. This sets up the system's [environment variables](https://kinsta.com/knowledgebase/what-is-an-environment-variable/) to include the directory where Python is installed.
 
 This setup allows the operating system to locate Python executables and scripts from any command line or terminal without specifying the full path (e.g. `C:\Users\..\python.exe`). Instead, you can access Python by simply typing `python` in your chosen terminal.
 
 ![logo](img/installer-setup-successful.png)
+
 After setup, verify that the installation was successful by opening Command Prompt and running `python --version`.
 
 ![logo](img/verify-install.png)
