@@ -67,11 +67,11 @@ VS Code has a **built-in terminal** that allows you to run command-line operatio
 ### 2.4.2 Hotkeys
 Hotkeys are the way to making coding feel comfortable and natural. It's essential to **automate your workflow**, and the less you have to move the mouse, [the better your wrists will feel](https://x-team.com/blog/avoid-carpal-tunnel-syndrome).
 
-VS Code is fully accessible from the keyboard. The most important key combination to know is `Ctrl` + `Shift` + `P`, which brings up the Command Palette. From there, you have access to all functionality within VS Code, including keyboard shortcuts for the most common operations. Here are some of the most useful ones for beginners.
+VS Code is fully accessible from the keyboard. The most important key combination to know is `F1`, which brings up the Command Palette. From there, you have access to all functionality within VS Code, including keyboard shortcuts for the most common operations. Here are some of the most useful ones for beginners.
 
 | Shortcut                 | Action                               |
 |--------------------------|--------------------------------------|
-| `Ctrl` + `Shift` + `P`   | Open Command Palette                 |
+| `F1`                     | Open Command Palette                 |
 | `Ctrl` + `/`             | Toggle Line Comment                  |
 | `Shift` + `Alt` + `↑`    | Copy Line Up (or Down `↓`)           |
 | `Alt` + `←`              | Go Back (or Forward `→`)             |
@@ -156,7 +156,7 @@ The Black formatting standard is a modern improvement to the previous one, [PEP 
 ### 2.4.6 Customizing User Settings
 Black defaults to [88 characters per line](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-length) while PEP8 uses between [72 and 99 characters](https://peps.python.org/pep-0008/#maximum-line-length). Keeping all of this in mind, I configured my user settings to include highlighting certain line lengths (i.e. rulers) and wrapping text at 88 characters. [Here is a link to the user `settings.json` file I use while developing](config/settings.json).
 
-Note that these settings are *user* settings, so they must be set by accessing **Preferences: Open User Settings (JSON)** from the command palette. Remember, `Ctrl` + `Shift` + `P` opens the command palette.
+Note that these settings are *user* settings, so they must be set by accessing **Preferences: Open User Settings (JSON)** from the command palette. Remember, `F1` opens the command palette.
 
 ![logo](img/command-palette-user-settings.png)
 
