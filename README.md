@@ -160,7 +160,7 @@ By default, VS Code creates a *new* terminal for each debug run. This can consum
 <!-- TOC --><a name="244-extensions-for-quality-of-life"></a>
 ### 2.4.4 Extensions for Quality of Life
 
-After years of coding, I find these core extensions greatly enhance the VS Code experience:
+After years of coding, I find these core extensions greatly enhance the VS Code experience.
 
 1. **[One Dark Pro](https://github.com/Binaryify/OneDark-Pro) by binaryify**
    - This theme's syntax highlighting and clever use of italics ease frustration by making code more readable.
@@ -189,9 +189,8 @@ After years of coding, I find these core extensions greatly enhance the VS Code 
 
 9. **[isort](https://github.com/microsoft/vscode-isort) by Microsoft**
    - This extension consistently sorts imports, enhancing code readability. Combined with Ruff, you can auto-format nearly everything in your Python scripts except for some comments and docstrings.
-
-10.  **[autoDocstring: VSCode Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) by Nils Werner**
-   - Dynamically create [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) based on a function's definition. This gives you that last piece of formatting automation.
+10. **[autoDocstring: VSCode Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) by Nils Werner**
+    -  Dynamically create [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) based on a function's definition. This gives you that last piece of formatting automation.
 
 <!-- TOC --><a name="245-automated-style-and-formatting"></a>
 ### 2.4.5 Automated Style and Formatting
