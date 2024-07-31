@@ -1,4 +1,6 @@
-# Python Essentials for STEM Wizards
+
+
+## Python Essentials for STEM Wizards
 ![logo](img/enthalpy-wizardry.webp)
 
 [TOC]
