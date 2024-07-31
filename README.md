@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="img/main-splash.png" alt="logo" width="616"/>
-</p>
-
 <p align="justify">
   <h1>Python Essentials for STEM Wizards</h1>
 </p>
