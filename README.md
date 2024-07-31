@@ -1,5 +1,5 @@
 <p align="justify">
-  <h1>Python Essentials for STEM Wizards</h1>
+  <h1>The Pythonomicon: Python Essentials for STEM Wizards</h1>
 </p>
 
 <p align="center">
