@@ -1,9 +1,15 @@
-# Python Essentials for STEM Wizards
-![logo](img/enthalpy-wizardry.webp)
+<p align="center">
+  <img src="img/main-splash.png" alt="logo" width="616"/>
+</p>
+
+<h1 style="text-align: center;">Python Essentials for STEM Wizards</h1>
+
+<p align="center">
+  <img src="img/enthalpy-wizardry.webp" alt="logo" width="616"/>
+</p>
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [Python Essentials for STEM Wizards](#python-essentials-for-stem-wizards)
 - [1. Introduction (to the Job Market)](#1-introduction-to-the-job-market)
   - [1.1 Purpose](#11-purpose)
   - [1.2 Background](#12-background)

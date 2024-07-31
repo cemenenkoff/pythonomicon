@@ -1,7 +1,12 @@
+<p align="center">
+  <img src="img/main-splash.png" alt="logo" width="616"/>
+</p>
 
+<h1 style="text-align: center;">Python Essentials for STEM Wizards</h1>
 
-## Python Essentials for STEM Wizards
-![logo](img/enthalpy-wizardry.webp)
+<p align="center">
+  <img src="img/enthalpy-wizardry.webp" alt="logo" width="616"/>
+</p>
 
 [TOC]
 
