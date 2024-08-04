@@ -1,10 +1,21 @@
-"""
-Write a function that calculates the angle between the minute and hour clock hands at
-any time. Times are given in hours and minutes with military time (e.g. (13, 0) is 1pm).
-"""
+from typing import Tuple
 
 
-def get_clock_hands_angle(t):
+def get_clock_hands_angle(t: Tuple[int]):
+    """Get the angle between the hour and the minute hand in degrees given a time.
+
+
+    Q: Write a function that calculates the angle between the minute and hour clock
+        hands at any time. Times are given in hours and minutes with military time
+        (e.g. (13, 0) is 1pm).
+
+
+    Args:
+        t (Tuple[int]): A military-style time expressed as (hour, minute).
+
+    Returns:
+        int: The number of degrees between the two clock hands.
+    """
     h = t[0] % 12
     m = t[1]
     m_tot = m + h * 60
