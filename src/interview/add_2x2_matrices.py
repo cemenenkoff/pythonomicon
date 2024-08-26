@@ -45,7 +45,10 @@ def add_2x2_matrices_chatgpt(*args: Tuple[np.array, ...]) -> None:
 
 @timer
 def add_2x2_matrices_simple(*args: Tuple[np.array, ...]) -> None:
-    """Add 2x2 matrices in the laziest way possible."""
+    """Add 2x2 matrices in the laziest way possible.
+
+    Note that this method wins while ChatGPT's recommended answer is the slowest.
+    """
     return sum(args)
 
 
