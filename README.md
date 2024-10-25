@@ -435,7 +435,7 @@ A file or directory that uses `kebab-case` can't be directly imported by Python,
 ## 4.3 Supplemental Files
 According to me, ***every repository worth its salt needs to have the following files:***
 - `.gitignore`
-  - A configuration file specifies files and directories that Git should ignore. It ensures that sensitive or unnecessary files (e.g. log files or compiled binaries) are not tracked by version control.
+  - A configuration file that specifies files and directories that Git should ignore. It ensures that sensitive or unnecessary files (e.g. log files or compiled binaries) are not tracked by version control.
 - `README.md`
   - A Markdown file that serves as the entry point and documentation for a project. It typically includes a description of the project, installation instructions, usage examples, and other relevant information.
 - `requirements.in`
@@ -450,9 +450,10 @@ As you want to automate your workflow further, you can introduce some of these i
   - Configuration file that specifies attributes for files in a Git repository. It can define attributes such as text/binary handling, merge strategies, and end-of-line normalization.
 - `.pre-commit-config.yaml`
   - Configuration file for the [Pre-commit framework](https://pre-commit.com/), which manages and executes hooks for code formatting, linting, and more, ensuring code quality *before* commits. I've found this configuration file to be one of the most important when it comes to reducing diffs and unifying a code base.
+    - You can have `pre-commit` run automatically on every `git commit` by running `pre-commit install` after the main module is installed. This installs a Git hook in the `.git/hooks` directory, specifically as a pre-commit hook.
     - If this file is implemented into a legacy code base and there are a ton of recommended changes to make (too many to feasibly fix at once), using the `--no-verify` flag bypasses the `pre-commit` checks.
 - `pyproject.toml`
-  - [TOML](https://toml.io/en/) configuration file that specifies build system requirements, dependencies, and other project metadata. I primarily use it to define settings for the Black code formatter, but also to list dependencies and requirements when designing a repository intended to be a Python [module](https://docs.python.org/3/tutorial/modules.html) itself.
+  - A [TOML](https://toml.io/en/) configuration file is one that specifies build system requirements, dependencies, and other project metadata. I primarily use it to define settings for the Black code formatter, but also to list dependencies and requirements when designing a repository intended to be a Python [module](https://docs.python.org/3/tutorial/modules.html) itself.
 
 <!-- TOC --><a name="5-conclusion"></a>
 # 5. Conclusion
