@@ -1,0 +1,2 @@
+You are given a string of length n.
+How do you iterate over it backwards? `for i in range(n - 1, -1, -1): ...`
