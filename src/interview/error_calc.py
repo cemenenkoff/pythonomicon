@@ -103,8 +103,8 @@ def getMinErrors(errorString, x, y):
     min_errors = float("inf")
 
     # Number of `0`s and `1`s after each position
-    total_zeros = prefix_zeros[-1]
-    total_ones = prefix_ones[-1]
+    # total_zeros = prefix_zeros[-1]
+    # total_ones = prefix_ones[-1]
 
     # Iterate and calculate errors dynamically
     count_zeros = 0  # Count of '0's encountered so far

@@ -182,3 +182,114 @@ A: `mystr.index(myitem)`
 
 Q: What is faster, checking for equality, or checking for greater than?
 A: The difference is negligible.
+
+Q: How do you get the ASCII value of a character in Python?
+A: `ord(ch)`
+
+Q: What does ASCII stand for?
+A: American Standard Code for Information *Interchange* (*not* exchange!)
+
+Q: For any given data structure, what's more important to understand, the interface or the implementation?
+A: The interface (i.e. valid operations like .append()). How `append()` actually works behind the scenes is less important than knowing how to use it, what it returns (if anything), and it's complexity when called.
+
+Q: What is a hash function?
+A: A function $h(k)$ that takes an *input* and *deterministically* converts it into an *integer* that is *less than* a fixed size set by the programmer. Inputs are called *keys*, and the same key will always map to the same integer.
+
+Q: What does `n % m` mean?
+A: Remainder after calculating `n` divided by `m`.
+
+Q: For an array, what is the time complexity for accessing a single element at random?
+A: $O(1)$
+
+Q: Is a dictionary a hash map? What about the other way around? What about hash table?
+A: Yes, they are all the same thing.
+
+Q: What is an ordered data structure?
+A: One where insertion order is maintained (i.e. "remembered").
+
+Q: What is an unordered data structure?
+A: One where insertion order is not relevant (e.g. a set or a dict).
+
+Q: Why should hash functions use a prime number modulus?
+A: See [here](https://stackoverflow.com/questions/1145217/why-should-hash-functions-use-a-prime-number-modulus).
+
+Q: What happens behind the scenes when you have a set and add the same element 100 times?
+A: The first time adds it to the set, and the next 99 do nothing.
+
+Q: How to check if a `key` is in a dictionary?
+A: `if key in mydict: ...`
+
+Q: How to delete a key from a dictionary?
+A: `del mydict[key]`
+
+Q: How to get the keys of a dictionary as an array?
+A: `mydict.keys()`
+
+Q: How to get the values of a dictionary as an array?
+A: `mydict.values()`
+
+Q: Are `mydict.values()` or `mydict.keys()` generators? lists? What are they?
+A: They are dynamically updating "dictionary view" objects.
+
+Q: How does `mydict.keys()` differ from `list(mydict.keys())`?
+A: `mydict.keys()`dynamically updates to the current state of `mydict`, while `list(mydict.keys())` is a static snapshot.
+
+Q: How to convert a list into a hash table with empty values?
+A: `{k: None for k in mylist}`
+
+Q: What is better for checking for existence? Hash tables or lists?
+A: Hash tables or a set determine existence in $O(1)$ whereas lists are $O(n)$.
+
+Q: How to convert a string into a dictionary?
+A: `{ch:None for ch in s}`
+
+Q: Is a set a hashmap?
+A: Yes, but the keys don't map to anything.
+
+Q: Do hash maps preserve order?
+A: No in the vast majority of instances. In *Python* however, since 3.7, dictionaries and sets preserve insertion order, meaning items are iterated in the order they were added.
+
+Q: T/F, in Python 3.7 or later, converting a list to a set will preserve the relative ordering of unique elements in the original list.
+A: True!
+
+Q: How to add an item to a set?
+A: `myset.add(item)`.
+
+Q: How to delete an item in a set?
+A: `myset.remove(item)` raises a KeyError if dne, `myset.discard(item)` does nothing, but both methods accomplish deletion.
+
+Q: Does performing `myset.pop()` remove the rightmost element or an arbitrary element? What about in Python 3.7+?
+A: Even in Python 3.7+, `myset.pop()`.
+
+Q: What's the best way to get a value from a dictionary if it exists, otherwise None?
+A: `mydict.pop(value, None)`
+
+Q: Is `range(n)` good to use for existence checks?
+A: No, it's not optimized for existence checks.
+
+Q: What is a `Collections.defaultdict` in Python, and how does it differ from a `dict`?
+A: A `defaultdict` is instantiated with a default *callable* that generates a value for missing keys (rather than raising a KeyError in a regular `dict`).
+
+Q: What is the best way to check that all items in a (nonempty) list are equal?
+A: Use a generator expression: `all(i == mylist[0] for i in mylist)`
+
+Q: What is the best way to get the count of all items in a list or string?
+A: Use a `collections.Counter` and instantiate it with `Counter(mystr)`.
+
+Q: True or False, `collections.Counter` and `collections.defaultdict` are both subclasses of a `dict`.
+A: True, both are like dicts, but have additional functionality for quality of life.
+
+Q: What is the complexity for creating a hash map from an array?
+A: O(n)
+
+Q: What is the complexity for converting a hash map's values to a set?
+A: O(n)
+
+Q: For simple counting purposes, what is better, `defaultdict` or `Counter`?
+A: `Counter` has more overhead due to specialized methods, so it's generally slower than `defaultdict(int)` for simple counting purposes.
+
+Q: T/F a prefix sum of an array of strictly positive integers has distinct values.
+A: True! The prefix sum elements are always increasing.
+
+Q: T/F prefix sums of arrays cannot have repeated elements.
+A: False, arrays that contain positive and negative numbers can have duplicate prefix sums.
